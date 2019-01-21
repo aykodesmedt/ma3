@@ -9,8 +9,8 @@
   </head>
   <body>
     <header>
-        <a href="index.php"><img src="" alt="logoKlein"/></a>
-        <ul>
+        <a href="index.php"><img src="./assets/img/logo_klein_1440.png" alt="logoKlein"/></a>
+        <ul class="menu_list">
           <li><a href="index.php?page=programma">Programma</a></li>
           <li><a href="">Flashback</a></li>
           <li><a href="">Praktisch</a></li>
