@@ -1,0 +1,16 @@
+@import './css/reset.css';
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* stylelint-enable */
