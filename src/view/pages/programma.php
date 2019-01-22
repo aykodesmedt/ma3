@@ -29,7 +29,7 @@
     <?php
       // foreach($acts as $act){
         ?>
-          <article>
+          <article class="resultaten">
             <img src="" alt="" />
             <p>TAG</p>
             <h3>The Sky Is The Limit</h3>

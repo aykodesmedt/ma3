@@ -1,0 +1,25 @@
+@import './vars.css';
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (--sm) {
+    flex-direction: column;
+  }
+}
+
+.menu_list {
+  /* width: 104.5rem; */
+  width: 50rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (--sm) {
+    width: 32rem;
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+}

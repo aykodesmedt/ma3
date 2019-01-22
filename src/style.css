@@ -1,11 +1,9 @@
 @import './css/reset.css';
-
-:root {
-  --rood: #f55c34;
-  --blauwgroen: #00b08d;
-  --paars: #cd57ff;
-  --blauw: #00a5ff;
-}
+@import './css/vars.css';
+@import './css/header.css';
+@import './css/home.css';
+@import './css/overzicht.css';
+@import './css/detail.css';
 
 html {
   font-size: 62.5%;
@@ -26,62 +24,38 @@ a {
   text-decoration: none;
 }
 
-body {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* 1440 */
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.menu_list {
-  /* width: 104.5rem; */
-  width: 50rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.header_datum {
-  font-size: 4rem;
-}
-
-.header_editie {
-  font-size: 2.4rem;
-}
-
-.header_gratis {
-  font-size: 3.4rem;
-}
-
-.header_titel {
-  width: 71.7rem;
-  height: 29.9rem;
-  background-image: url(./assets/img/logo_groot_1440.png);
+.hidden {
+  visibility: hidden;
 }
 
 .title_underline {
   font-size: 4.8rem;
-  background-image: url(./assets/img/titel_1440.png);
   background-repeat: no-repeat;
   background-position-y: 3rem;
-}
 
-.home_voorstelling {
-  display: flex;
-  flex-direction: row;
-}
+  @media (--sm) {
+    font-size: 3.6rem;
+    background-image: url(./assets/img/titel_768.png);
+    background-position-y: 2rem;
+  }
 
-.home_voorstelling_foto {
-  width: 29rem;
-  height: 29rem;
-  background-image: url();
+  @media (--md) {
+    background-image: url(./assets/img/titel_768.png);
+  }
+
+  @media (--lg) {
+    background-image: url(./assets/img/titel_1024.png);
+  }
+
+  @media (--xl) {
+    background-image: url(./assets/img/titel_1440.png);
+  }
 }
 
 .tag {
@@ -90,107 +64,132 @@ header {
   padding: .5rem 1rem;
   background-color: var(--rood);
   border-radius: 1rem;
+
+  @media (--sm) {
+    font-size: 1.6rem;
+  }
 }
 
-.home_voorstelling_info {
-  width: 25.2rem;
-  height: 25.8rem;
-  background-image: url(./assets/img/kijker1_1440.png);
-  background-repeat: no-repeat;
+/* navigation */
+
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @media (--sm) {
+    flex-direction: column;
+  }
+
+  @media (--md) {
+    flex-direction: row;
+  }
 }
 
-.act_name {
-  font-size: 2.5rem;
+.logo {
+  grid-area: logo;
 }
 
-.group_name {
-  font-size: 1.8rem;
-  font-style: italic;
+.menu_list {
+  grid-area: menu;
+  color: #000;
 }
 
-.hours {
-  font-size: 2rem;
+h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 60px;
+  line-height: 70px;
 }
 
-.meerWeten {
-  font-size: 1.6rem;
-  text-transform: capitalize;
+.toggle,
+[id^='drop'] {
+  display: none;
 }
 
-.home_straatact {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #000;
+  font-size: 17px;
+  text-decoration: none;
 }
 
-.home_straatact_info {
-  z-index: 2;
-  background-color: var(--blauwgroen);
-  padding: 2rem 2rem 2rem 6rem;
-  margin-left: -6rem;
-}
+/* Media Queries
+--------------------------------------------- */
 
-.alleButton {
-  font-size: 1.8rem;
-  background-color: white;
-  border: .2rem solid;
-  border-color: var(--paars);
-  border-radius: 25rem;
-  padding: .5rem 1.5rem;
-}
+@media all and (max-width: 768px) {
 
-.over_isb {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+  .toggle + a,
+  .menu {
+    display: none;
+  }
 
-.over_isb_titel {
-  display: flex;
-  flex-direction: column;
-  background-image: url(./assets/img/ISB_1440.png);
-  width: 9.3rem;
-  height: 36.7rem;
-  justify-content: center;
-  align-items: center;
-  font-size: 8rem;
-  margin-right: 4rem;
-}
+  .toggle {
+    display: block;
+    /* background-color: #254441; */
+    padding: 14px 20px;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+  }
 
-.over_isb_uitleg {
-  width: 70rem;
-  height: 30rem;
-  font-size: 2rem;
-  border-left: .5rem solid;
-  border-color: black;
-  padding: 4rem;
-}
+  .toggle:hover {
+    color: #f00;
+  }
 
-.vrijwilligers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(./assets/img/vrijwilliger_1440.png);
-  background-repeat: no-repeat;
-}
+  [id^='drop']:checked + ul {
+    display: block;
+  }
 
-.vrijwilliger_titel {
-  font-size: 7.2rem;
-}
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
 
-.vrijwilliger_uitleg {
-  width: 73.7rem;
-  height: 23.9rem;
-  background-color: white;
-  border: .2rem solid;
-  border-color: var(--blauwgroen);
-  font-size: 2rem;
-  padding: 2rem;
-  margin-left: 20rem;
-  line-height: 2.8rem;
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+    color: #f00;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 17px;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    color: #000;
+  }
+
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #fff;
+  }
+
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
+
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+  }
 }
