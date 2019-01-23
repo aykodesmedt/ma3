@@ -33,6 +33,34 @@
     <main>
       <?php echo $content;?>
     </main>
+    <footer>
+      <div class="footer_text">
+        <article class="footer_article_opdehoogte">
+          <h2 class="footer_title">Blijf op de hoogte!</h2>
+          <img src="./assets/img/fb-logo.png" alt="">
+        </article>
+        <div class="footer_article_rest">
+          <article class="footer_article">
+            <h2 class="footer_title">Algemeen</h2>
+            <p>Programma</p>
+            <p>Bij slecht weer</p>
+          </article>
+          <article class="footer_article">
+            <h2 class="footer_title">Praktisch</h2>
+            <p>Bereikbaarheid</p>
+            <p>Toegankelijkheid</p>
+            <p>Plan</p>
+          </article>
+          <article class="footer_article">
+            <h2 class="footer_title">Organisatoren</h2>
+            <p>Beveren Verbindt</p>
+            <p>Vrijwilligers</p>
+            <p>Partners</p>
+          </article>
+        </div>
+      </div>
+      <p>&copy;Ayko De Smedt 2019  MAIII</p>
+    </footer>
     <?php echo $js; ?>
   </body>
 </html>

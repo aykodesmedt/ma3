@@ -86,17 +86,26 @@
   background-repeat: no-repeat;
   height: 30rem;
   padding-top: 10rem;
-  padding-left: 4rem;
+  padding-left: 3rem;
 }
 
 .resultaat_info_act {
   font-size: 2.5rem;
+  padding: .5rem;
 }
 
 .resultaat_info_group {
   font-size: 1.8rem;
+  padding: .5rem;
 }
 
 .resultaat_info_hour {
   font-size: 2rem;
+  padding: .5rem;
+}
+
+.meer_resultaten {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: var(--blauwgroen);
 }

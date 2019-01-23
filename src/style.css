@@ -28,6 +28,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -35,6 +36,7 @@ main {
 }
 
 .title_underline {
+  width: 100%;
   font-size: 4.8rem;
   background-repeat: no-repeat;
   background-position-y: 3rem;
@@ -192,4 +194,126 @@ nav a {
   nav ul ul ul li {
     position: static;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 1rem 1rem 2rem;
+
+  @media (--sm) {
+    background-image: url(./assets/img/footer_320.png);
+    background-repeat: repeat-x;
+    height: 92.6rem;
+  }
+
+  @media (--md) {
+    background-image: url(./assets/img/footer_768.png);
+    background-repeat: repeat-x;
+    height: 68.8rem;
+  }
+
+  @media (--lg) {
+    background-image: url(./assets/img/footer_1024.png);
+    background-repeat: repeat-x;
+    height: 43rem;
+  }
+}
+
+.footer_article_opdehoogte {
+  grid-area: opdehoogte;
+  font-size: 1.8rem;
+  margin: 1rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  @media (--sm) {
+    justify-content: flex-end;
+  }
+
+  @media (--lg) {
+    justify-content: center;
+  }
+}
+
+.footer_article_opdehoogte > h2 {
+  padding-bottom: 3rem;
+}
+
+.footer_article_rest {
+  grid-area: rest;
+  display: flex;
+
+  @media (--sm) {
+    flex-direction: column;
+  }
+
+  @media (--md) {
+    flex-direction: row;
+    padding-top: 4rem;
+  }
+
+  @media (--lg) {
+    flex-direction: row;
+    padding-top: 9rem;
+  }
+}
+
+.footer_text {
+  /* margin-bottom: 8rem; */
+  display: grid;
+
+  @media (--sm) {
+    height: 92.6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      'opdehoogte'
+      'rest';
+  }
+
+  @media (--md) {
+    /* height: 92.6rem; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'opdehoogte'
+      'rest';
+  }
+
+  @media (--lg) {
+    height: 68.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'opdehoogte rest';
+  }
+
+  @media (--xl) {
+    height: 68.8rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'opdehoogte rest';
+  }
+}
+
+.footer_title {
+  font-size: 3rem;
+}
+
+.footer_article {
+  font-size: 1.8rem;
+  margin: 2rem;
+
+  @media (--xl) {
+    margin: 2rem 6rem;
+  }
+}
+
+.footer_article > p {
+  padding-top: 2rem;
 }

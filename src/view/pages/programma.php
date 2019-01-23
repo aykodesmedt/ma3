@@ -52,5 +52,5 @@
       // }
     ?>
   </ul>
-  <p>MEER RESULTATEN</p>
+  <p class="meer_resultaten">meer resultaten laden</p>
 </section>
