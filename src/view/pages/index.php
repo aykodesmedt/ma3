@@ -29,7 +29,7 @@
         <a href=""><span class="alleButton">Alle voorstellingen op zaterdag</span></a>
       </div>
     </article>
-    <article>
+    <article class="home_straatact_article">
       <div class="home_straatact">
         <div class="home_straatact_foto">
           <img src="./assets/img/kijker2_320.png" alt="FOTO">

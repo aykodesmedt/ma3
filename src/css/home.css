@@ -68,8 +68,10 @@
 }
 
 .familiedag > div {
+  display: grid;
+  padding-top: 2rem;
+
   @media (--sm) {
-    display: grid;
     grid-template-rows: repeat(2, 1fr);
 
     grid-template-areas:
@@ -78,7 +80,6 @@
   }
 
   @media (--md) {
-    display: grid;
     grid-template-rows: repeat(2, 1fr);
 
     grid-template-areas:
@@ -87,13 +88,14 @@
   }
 
   @media (--lg) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 5rem 1fr;
+    grid-template-rows: 1fr;
 
-    grid-template-areas:
-      'titel titel'
-      'kijker1 kijker2';
+    grid-template-areas: 'kijker1 kijker2';
+  }
+
+  @media (--xl) {
+    grid-gap: 2rem;
   }
 }
 
@@ -166,11 +168,13 @@
   text-transform: capitalize;
 }
 
+.home_straatact_article {
+  grid-area: kijker2;
+}
+
 .home_straatact {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  grid-area: kijker2;
 
   @media (--sm) {
     flex-direction: column;
@@ -209,9 +213,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 4rem;
 
   @media (--sm) {
     flex-direction: column;
+  }
+
+  @media (--lg) {
+    flex-direction: row;
   }
 }
 
@@ -258,6 +267,11 @@
     width: 100vw;
   }
 
+  @media (--md) {
+    width: 62.7rem;
+    height: 28rem;
+  }
+
   @media (--lg) {
     width: 70rem;
     height: 30rem;
@@ -269,6 +283,7 @@
 }
 
 .vrijwilligers {
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
