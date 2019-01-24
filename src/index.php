@@ -12,7 +12,7 @@ $routes = array(
     'controller' => 'Acts',
     'action' => 'programma'
   ),
-  'act-detail' => array(
+  'detail' => array(
     'controller' => 'Acts',
     'action' => 'detail'
   )

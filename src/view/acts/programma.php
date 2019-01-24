@@ -33,18 +33,26 @@
     </div>
     <div class="switch-field switch-soorten">
       <div class="switch-title">Soort:</div>
-      <input type="radio" id="switch_3_left" name="act" value="alle"
-        <?php
-          if($currentDag == 1){
-            echo 'checked';
-          }
-        ?>
+      <input type="radio" id="switch_3_left" name="act" value=""
+      checked
       />
       <label for="switch_3_left">Alle acts</label>
       <div>
-        <input type="radio" id="switch_3_center" name="act" value="voorstellingen" />
+        <input type="radio" id="switch_3_center" name="act" value="voorstelling"
+        <?php
+          if($currentSoortact == 'voorstelling'){
+            echo 'checked';
+          }
+        ?>
+        />
         <label for="switch_3_center">Voorstellingen</label>
-        <input type="radio" id="switch_3_right" name="act" value="straatacts" />
+        <input type="radio" id="switch_3_right" name="act" value="straatact"
+        <?php
+          if($currentSoortact == 'straatact'){
+            echo 'checked';
+          }
+        ?>
+        />
         <label for="switch_3_right">Straatacts</label>
       </div>
     </div>
@@ -71,9 +79,10 @@
                   <img src="" alt="" />
                   <span class="tag">Acrobatie</span>
                 </div>
+                <p><?php echo $act['soort_act'] ?></p>
                 <div class="resultaat_info">
-                  <h3 class="resultaat_info_act"><?php echo $act['titel'];?></h3>
-                  <p class="resultaat_info_group"><?php echo $act['titel'];?></p>
+                  <h3 class="resultaat_info_act"><?php echo $act['name_act'];?></h3>
+                  <p class="resultaat_info_group"><?php echo $act['name_group'];?></p>
                   <p class="resultaat_info_hour"><?php echo $act['uur'];?></p>
                   <a href="" class="meerWeten">MEER WETEN</a>
                 </div>

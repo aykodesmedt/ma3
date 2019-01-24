@@ -17,7 +17,7 @@
           <div class="home_voorstelling_foto">
             <span class="tag">Acrobatie</span>
             <span class="tag">Voorstelling</span>
-            <!-- <img src="" alt="FOTO" width="290" height="290" /> -->
+
           </div>
           <div class="home_voorstelling_info">
             <h3 class="act_name">Viva Victor</h3>

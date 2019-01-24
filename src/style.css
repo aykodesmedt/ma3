@@ -101,7 +101,7 @@ nav {
 
 .menu_list {
   grid-area: menu;
-  color: #000;
+  color: black;
 }
 
 h1 {
@@ -119,7 +119,7 @@ h1 {
 nav a {
   display: block;
   padding: 14px 20px;
-  color: #000;
+  color: black;
   font-size: 17px;
   text-decoration: none;
 }
@@ -135,14 +135,14 @@ nav a {
     display: block;
     /* background-color: #254441; */
     padding: 14px 20px;
-    color: #000;
+    color: black;
     font-size: 17px;
     text-decoration: none;
     border: none;
   }
 
   .toggle:hover {
-    color: #f00;
+    color: red;
   }
 
   [id^='drop']:checked + ul {

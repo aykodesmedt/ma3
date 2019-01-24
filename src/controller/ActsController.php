@@ -19,16 +19,17 @@ class ActsController extends Controller {
     $this->set('currentPage', 'programma');
 
     if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
-      $acts = $this->actDAO->search($_GET['dag']);
+      $acts = $this->actDAO->search($_GET['dag'], $_GET['act']);
       $this->set('dag',$_GET['dag']);
       $this->set('currentDag', $_GET['dag']);
-      // $this->set('act',$_GET['act']);
-      $this->set('currentSoortact', $_GET['soort']);
+      $this->set('act',$_GET['act']);
+      $this->set('currentSoortact', $_GET['act']);
     }else{
       $acts = $this->actDAO->search('1');
       $this->set('dag','1');
       $this->set('currentDag','1');
-      // $this->set('act','alle');
+      $this->set('act','');
+      $this->set('currentSoortact', '');
     }
 
     $this->set('acts', $acts);
@@ -36,6 +37,31 @@ class ActsController extends Controller {
 
   public function detail() {
     $this->set('currentPage', 'programma-detail');
+
+    if(!empty($_GET['id'])){
+      $act = $this->actDAO->selectById($_GET['id']);
+      $this->set('act', $act);
+    }
+
+    if(empty($act)){
+      $_SESSION['error'] = 'Deze act werd niet gevonden.';
+      header('Location: index.php');
+      exit();
+    }
+
+    //sql voor 4 acts die ook deze dag gebeuren
+
+    // if(!empty($_GET['id'])){
+    //   $act = $this->actDAO->selectById($_GET['id']);
+    //   $this->set('act', $act);
+    // }
+
+    // if(empty($act)){
+    //   $_SESSION['error'] = 'Deze act werd niet gevonden.';
+    //   header('Location: index.php');
+    //   exit();
+    // }
+
   }
 
 }

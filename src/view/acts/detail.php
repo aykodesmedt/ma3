@@ -1,41 +1,39 @@
+<?php
+  var_dump($act[0]['name_act']);
+?>
 <section>
         <a href="">Terug naar overzicht</a> <img src="" alt="" />
-        <h2><?php echo $act['titel']; ?></h2>
-        <h3>by The Flying Dutchmen</h3>
-        <p>TAG</p>
-        <p>TAG</p>
+        <h2><?php echo $act[0]['name_act']; ?></h2>
+        <h3><?php echo $act[0]['name_group']; ?></h3>
+        <p><?php echo $act[0]['tag']; ?></p>
+        <p><?php echo $act[0]['tag']; ?></p>
         <ul>
           <li>
             <img src="" alt="icon" />
-            <p>24 augustus</p>
+            <p><?php echo $act[0]['dag']; ?></p>
           </li>
           <li>
             <img src="" alt="icon" />
-            <p>13.45 - 15.45</p>
+            <p><?php echo $act[0]['uur']; ?></p>
           </li>
           <li>
             <img src="" alt="icon" />
-            <p>Oud Atletiekplein</p>
+            <p><?php echo $act[0]['locatie']; ?></p>
           </li>
           <li>
             <img src="" alt="icon" />
-            <p>www.website.com</p>
+            <p><?php echo $act[0]['website']; ?></p>
           </li>
           <li>
             <img src="" alt="icon" />
-            <p>Nederland & Canada</p>
+            <p><?php echo $act[0]['land']; ?></p>
           </li>
         </ul>
         <div>
           <img src="" alt="" />
-          <h4>Over The Flying Dutchmen</h4>
+          <h4>Over <?php echo $act[0]['titel']; ?></h4>
           <p>
-            De Amsterdamse jongleur Michiel Hesseling, "...een Mozart in zijn
-            beroep..." genoemd, en Canada's "...meest spectaculaire
-            éénwielfietser..." Jean-Michel Paré vormden in 1989 een inmiddels
-            wereldberoemd duo. Deze twee “old school” komische genieën worden
-            als helden beschouwd in de internationale wereld van de straat
-            artiesten.
+          <?php echo $act[0]['beschrijving']; ?>
           </p>
         </div>
         <div>
