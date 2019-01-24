@@ -6,7 +6,7 @@ class ActDAO extends DAO {
 
   public function search($dag = '', $act = ''){
     // $sql = "SELECT * FROM `players` WHERE 1";
-    $sql = "SELECT acts .*, isb_uren.id, isb_uren.locatie_id, isb_uren.uur, isb_dagen.dag
+    $sql = "SELECT acts .*, isb_uren.locatie_id, isb_uren.uur, isb_dagen.dag, isb_dagen.id as dag_id
     FROM acts
     INNER JOIN isb_uren
     ON acts.id = isb_uren.act_id
@@ -52,6 +52,22 @@ class ActDAO extends DAO {
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectByDag($dagId, $max = 4){
+    $sql = "SELECT acts .*, isb_uren.uur, isb_dagen.dag
+    FROM acts
+    INNER JOIN isb_uren
+    ON acts.id = isb_uren.act_id
+    INNER JOIN isb_dagen
+    ON isb_uren.dag_id = isb_dagen.id
+    WHERE isb_uren.dag_id = :dag_id
+    LIMIT :max";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':dag_id', $dagId);
+    $stmt->bindValue(':max', $max);
+    $stmt->execute();
+    return $stmt->fetchALL(PDO::FETCH_ASSOC);
   }
 
 }

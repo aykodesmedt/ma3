@@ -13,6 +13,7 @@ class ActsController extends Controller {
 
   public function index() {
     $this->set('currentPage', 'home');
+
   }
 
   public function programma() {
@@ -51,16 +52,16 @@ class ActsController extends Controller {
 
     //sql voor 4 acts die ook deze dag gebeuren
 
-    // if(!empty($_GET['id'])){
-    //   $act = $this->actDAO->selectById($_GET['id']);
-    //   $this->set('act', $act);
-    // }
+    if(!empty($_GET['dag'])){
+      $ookVandaag = $this->actDAO->selectByDag($_GET['dag']);
+      $this->set('ook_vandaag', $ookVandaag);
+    }
 
-    // if(empty($act)){
-    //   $_SESSION['error'] = 'Deze act werd niet gevonden.';
-    //   header('Location: index.php');
-    //   exit();
-    // }
+    if(empty($act)){
+      $_SESSION['error'] = 'Deze act werd niet gevonden.';
+      header('Location: index.php');
+      exit();
+    }
 
   }
 

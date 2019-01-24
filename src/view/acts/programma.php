@@ -1,5 +1,5 @@
 <?php
-  // var_dump($acts);
+  var_dump($acts);
 ?>
 <form class="form" action="index.php?page=programma">
     <input type="hidden" name="page" value="programma" />
@@ -67,16 +67,15 @@
 </section>
 <section class="resultaten_section">
   <h2 class="title_underline">Resultaten</h2>
-  <ul>
+  <ul class="resultaten_grid">
     <?php
       foreach($acts as $act){
-
         ?>
           <li>
-            <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>">
+            <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
               <article class="resultaat">
                 <div class="resultaat_foto">
-                  <img src="" alt="" />
+                <img class="img--full" src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
                   <span class="tag">Acrobatie</span>
                 </div>
                 <p><?php echo $act['soort_act'] ?></p>

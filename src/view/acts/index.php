@@ -17,8 +17,26 @@
           <div class="home_voorstelling_foto">
             <span class="tag">Acrobatie</span>
             <span class="tag">Voorstelling</span>
-
+            <img class="img--full" src="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg" alt="viva victor">
+            <!-- <picture>
+              <source srcset="./assets/img/acts/webp/024-cie-krak-viva-victor_home.webp 300w,
+                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,1x.webp 30w,
+                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,25x.webp 50w,
+                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,33x.webp 100w,
+                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,5x.webp 150w,
+                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,75x.webp 280w"
+                sizes="100%" type="image/webp">
+              <source srcset="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg 300w,
+              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,1x.jpg 30w,
+              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,25x.jpg 50w,
+              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,33x.jpg 100w,
+              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,5x.jpg 150w,
+              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,75x.jpg 280w"
+                sizes="100%" type="image/jpeg">
+              <img class="img--full" src="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg" alt="viva victor">
+            </picture> -->
           </div>
+
           <div class="home_voorstelling_info">
             <h3 class="act_name">Viva Victor</h3>
             <p class="group_name">by Cie Krak</p>
@@ -76,8 +94,24 @@
   <div class="andere_evenementen">
     <article class="ander_event event1">
       <div class="event_foto">
-        <img src="" alt="" />
         <span class="tag">25/6</span>
+        <picture>
+          <source srcset="./assets/img/acts/webp/gekkefietsencircuit.webp 300w,
+            ./assets/img/acts/webp/gekkefietsencircuit@0,1x.webp 30w,
+            ./assets/img/acts/webp/gekkefietsencircuit@0,2x.webp 250w,
+            ./assets/img/acts/webp/gekkefietsencircuit@0,33x.webp 333w,
+            ./assets/img/acts/webp/gekkefietsencircuit@0,5x.webp 150w,
+            ./assets/img/acts/webp/gekkefietsencircuit@0,75x.webp 280w"
+            sizes="100vw" type="image/webp">
+          <source srcset="./assets/img/acts/jpg/gekkefietsencircuit.jpg 300w,
+          ./assets/img/acts/jpg/gekkefietsencircuit@0,1x.jpg 30w,
+          ./assets/img/acts/jpg/gekkefietsencircuit@0,2x.jpg 250w,
+          ./assets/img/acts/jpg/gekkefietsencircuit@0,33x.jpg 333w,
+          ./assets/img/acts/jpg/gekkefietsencircuit@0,5x.jpg 150w,
+          ./assets/img/acts/jpg/gekkefietsencircuit@0,75x.jpg 280w"
+            sizes="100vw" type="image/jpeg">
+          <img class="img--full" src="./assets/img/acts/jpg/gekkefietsencircuit.jpg" alt="gekkefietsencircuit" width="300" height="300">
+        </picture>
       </div>
       <h3 class="event_title">Gekkefietsencircuit</h3>
       <div class="event_beschrijving">
@@ -91,8 +125,25 @@
     </article>
     <article class="ander_event event2">
       <div class="event_foto">
-        <img src="" alt="" />
         <span class="tag">25/6</span>
+        <!-- <img class="img--full" src="./assets/img/andere_evenementen/jpg/olympischestraat.jpg" alt="olympischestraat" width="300" height="300"> -->
+        <picture>
+          <source srcset="./assets/img/andere_evenementen/webp/olympischestraat.webp 300w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,1x.webp 30w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,2x.webp 250w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,33x.webp 333w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,5x.webp 150w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,75x.webp 280w"
+            sizes="100vw" type="image/webp">
+          <source srcset="./assets/img/andere_evenementen/jpg/olympischestraat.jpg 300w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,1x.jpg 30w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,2x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,33x.jpg 333w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,5x.jpg 150w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,75x.jpg 280w"
+            sizes="100vw" type="image/jpeg">
+          <img class="img--full" src="./assets/img/andere_evenementen/jpg/olympischestraat.jpg" alt="olympischestraat" width="300" height="300">
+        </picture>
       </div>
       <h3 class="event_title">13e Olympische Straat</h3>
       <div class="event_beschrijving">
@@ -106,8 +157,24 @@
     </article>
     <article class="ander_event event3">
       <div class="event_foto">
-        <img src="" alt="" />
         <span class="tag">25/6</span>
+        <picture>
+          <source srcset="./assets/img/andere_evenementen/webp/avondfeestmarkt.webp 300w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,1x.webp 30w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,2x.webp 250w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,33x.webp 333w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,5x.webp 150w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,75x.webp 280w"
+            sizes="100vw" type="image/webp">
+          <source srcset="./assets/img/andere_evenementen/jpg/avondfeestmarkt.jpg 300w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,1x.jpg 30w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,2x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,33x.jpg 333w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,5x.jpg 150w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,75x.jpg 280w"
+            sizes="100vw" type="image/jpeg">
+          <img class="img--full" src="./assets/img/andere_evenementen/jpg/avondfeestmarkt.jpg" alt="avondfeestmarkt" width="300" height="300">
+        </picture>
       </div>
       <h3 class="event_title">Verlichte Avondfeestmarkt</h3>
       <div class="event_beschrijving">
@@ -122,8 +189,25 @@
     </article>
     <article class="ander_event event4">
       <div class="event_foto">
-        <img src="" alt="" />
+
         <span class="tag">25/6</span>
+        <picture>
+          <source srcset="./assets/img/andere_evenementen/webp/rommelmarkt.webp 300w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,1x.webp 30w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,2x.webp 250w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,33x.webp 333w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,5x.webp 150w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,75x.webp 280w"
+            sizes="100vw" type="image/webp">
+          <source srcset="./assets/img/andere_evenementen/jpg/rommelmarkt.jpg 300w,
+          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,1x.jpg 30w,
+          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,2x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,33x.jpg 333w,
+          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,5x.jpg 150w,
+          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,75x.jpg 280w"
+            sizes="100vw" type="image/jpeg">
+          <img class="img--full" src="./assets/img/andere_evenementen/jpg/rommelmarkt.jpg" alt="rommelmarkt" width="300" height="300">
+        </picture>
       </div>
       <h3 class="event_title">Rommelmarkt</h3>
       <div class="event_beschrijving">
