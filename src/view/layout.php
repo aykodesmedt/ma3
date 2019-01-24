@@ -16,7 +16,14 @@
           </a>
           <ul class="menu_list">
             <li>
-              <a href="index.php?page=programma">Programma</a>
+              <a href="index.php?page=programma"
+              class="
+              <?php
+                if($currentPage == 'programma'){
+                  echo 'menu_active';
+                }
+              ?>
+              ">Programma</a>
             </li>
             <li>
               <label for="drop" class="toggle">Meer</label>
@@ -31,7 +38,7 @@
         </nav>
     </header>
     <main>
-      <?php echo $content;?>
+      <?php echo $content; ?>
     </main>
     <footer>
       <div class="footer_text">

@@ -24,11 +24,16 @@ a {
   text-decoration: none;
 }
 
+.menu_active {
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .hidden {
@@ -36,27 +41,31 @@ main {
 }
 
 .title_underline {
-  width: 100%;
+  /* width: 100%; */
   font-size: 4.8rem;
   background-repeat: no-repeat;
   background-position-y: 3rem;
 
   @media (--sm) {
     font-size: 3.6rem;
-    background-image: url(./assets/img/titel_768.png);
+    background-image: url(./assets/img/titel_320.png);
+    width: 31.2rem;
     background-position-y: 2rem;
   }
 
   @media (--md) {
     background-image: url(./assets/img/titel_768.png);
+    width: 73.4rem;
   }
 
   @media (--lg) {
     background-image: url(./assets/img/titel_1024.png);
+    width: 100.3rem;
   }
 
   @media (--xl) {
     background-image: url(./assets/img/titel_1440.png);
+    width: 127.3rem;
   }
 }
 
@@ -114,9 +123,6 @@ nav a {
   font-size: 17px;
   text-decoration: none;
 }
-
-/* Media Queries
---------------------------------------------- */
 
 @media all and (max-width: 768px) {
 

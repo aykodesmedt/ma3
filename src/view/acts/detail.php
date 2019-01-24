@@ -1,6 +1,6 @@
 <section>
         <a href="">Terug naar overzicht</a> <img src="" alt="" />
-        <h2>The Sky Is The Limit</h2>
+        <h2><?php echo $act['titel']; ?></h2>
         <h3>by The Flying Dutchmen</h3>
         <p>TAG</p>
         <p>TAG</p>
@@ -12,7 +12,6 @@
           <li>
             <img src="" alt="icon" />
             <p>13.45 - 15.45</p>
-            <p>17.45 - 19.45</p>
           </li>
           <li>
             <img src="" alt="icon" />

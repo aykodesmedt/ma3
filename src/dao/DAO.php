@@ -4,7 +4,7 @@ class DAO {
 
   // Properties
   private static $dbHost = "localhost";
-	private static $dbName = "ISB";
+	private static $dbName = "isb_database";
 	private static $dbUser = "isb";
 	private static $dbPass = "isb";
 	private static $sharedPDO;
