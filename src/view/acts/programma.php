@@ -72,7 +72,7 @@
       foreach($acts as $act){
         ?>
           <li>
-            <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>&amp;exceptact=<?php echo $act['id'];?>">
+            <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
               <article class="resultaat">
                 <div class="resultaat_foto">
                 <img class="img--full" src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
@@ -84,6 +84,7 @@
                   <p class="resultaat_info_hour"><?php echo $act['uur'];?></p>
                   <a href="" class="meerWeten">MEER WETEN</a>
                 </div>
+                <img src="./assets/img/resultaat_320.png" class="streep" alt="">
               </article>
             </a>
 

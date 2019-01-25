@@ -1,1 +1,17 @@
 /* detail */
+
+.section__ookvandaag {
+  margin: 2rem 1rem;
+  width: 100vw;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, auto);
+  overflow: scroll;
+}
+
+.ookvandaagtitel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

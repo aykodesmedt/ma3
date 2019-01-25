@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta http-equiv="refresh"> -->
     <title>ISB - Home</title>
     <?php echo $css;?>
   </head>
@@ -12,10 +13,8 @@
         <!-- <a href="index.php"><img src="./assets/img/logo_klein_1440.png" alt="logoKlein"/></a> -->
         <nav>
           <a href="index.php" class="logo">
-            <h1>
-              <img src="./assets/img/logo_klein_320.png" alt="logoKlein"/>
-            </h1>
-
+            <h1 class="hidden">ISB - logo</h1>
+            <img src="./assets/img/logo_klein_320.png" alt="logoKlein">
           </a>
           <ul class="menu_list">
             <li>

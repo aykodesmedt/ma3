@@ -7,6 +7,13 @@ header {
 
   @media (--sm) {
     flex-direction: column;
+    align-items: center;
+  }
+
+  @media (--md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

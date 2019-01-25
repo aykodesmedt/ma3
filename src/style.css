@@ -37,7 +37,8 @@ main {
 }
 
 .hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
 }
 
 .title_underline {
@@ -65,7 +66,8 @@ main {
 
   @media (--xl) {
     background-image: url(./assets/img/titel_1440.png);
-    width: 127.3rem;
+    /* width: 127.3rem; */
+    width: 100vw;
   }
 }
 
@@ -105,7 +107,7 @@ nav {
 }
 
 h1 {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   text-align: center;
   font-size: 60px;
   line-height: 70px;
@@ -124,7 +126,7 @@ nav a {
   text-decoration: none;
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   .toggle + a,
   .menu {
@@ -199,6 +201,20 @@ nav a {
 
   nav ul ul ul li {
     position: static;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

@@ -52,7 +52,7 @@ class ActDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectByDag($dagId, $id, $max = 4){
+  public function selectByDag($dagId, $id, $max = 6){
     $sql = "SELECT acts .*, isb_uren.uur, isb_dagen.dag, isb_dagen.id as dag_id
     FROM acts
     INNER JOIN isb_uren
