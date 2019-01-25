@@ -52,9 +52,11 @@ class ActsController extends Controller {
 
     //sql voor 4 acts die ook deze dag gebeuren
 
-    if(!empty($_GET['dag'])){
-      $ookVandaag = $this->actDAO->selectByDag($_GET['dag']);
+    if(!empty($_GET['dag']) && !empty($_GET['exceptact'])){
+      $ookVandaag = $this->actDAO->selectByDag($_GET['dag'], $_GET['exceptact']);
       $this->set('ook_vandaag', $ookVandaag);
+    }else{
+      $this->set('ook_vandaag', 'NIET OKE');
     }
 
     if(empty($act)){

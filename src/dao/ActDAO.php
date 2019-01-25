@@ -54,17 +54,18 @@ class ActDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectByDag($dagId, $max = 4){
-    $sql = "SELECT acts .*, isb_uren.uur, isb_dagen.dag
+  public function selectByDag($dagId, $exceptact, $max = 4){
+    $sql = "SELECT acts .*, isb_uren.uur, isb_dagen.dag, isb_dagen.id as dag_id
     FROM acts
     INNER JOIN isb_uren
     ON acts.id = isb_uren.act_id
     INNER JOIN isb_dagen
     ON isb_uren.dag_id = isb_dagen.id
-    WHERE isb_uren.dag_id = :dag_id
+    WHERE isb_uren.dag_id = :dag_id AND isb_uren.act_id != :exceptact
     LIMIT :max";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':dag_id', $dagId);
+    $stmt->bindValue(':exceptact', $exceptact);
     $stmt->bindValue(':max', $max);
     $stmt->execute();
     return $stmt->fetchALL(PDO::FETCH_ASSOC);

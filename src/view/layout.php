@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,10 @@
         <!-- <a href="index.php"><img src="./assets/img/logo_klein_1440.png" alt="logoKlein"/></a> -->
         <nav>
           <a href="index.php" class="logo">
-            <img src="./assets/img/logo_klein_320.png" alt="logoKlein"/>
+            <h1>
+              <img src="./assets/img/logo_klein_320.png" alt="logoKlein"/>
+            </h1>
+
           </a>
           <ul class="menu_list">
             <li>
