@@ -72,6 +72,26 @@
   width: 30rem;
 }
 
+.resultaten_grid {
+  display: grid;
+
+  @media (--sm) {
+    grid-template-columns: auto;
+  }
+
+  @media (--md) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (--lg) {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media (--xl) {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
 .resultaat_foto {
   width: 30rem;
   height: 30rem;

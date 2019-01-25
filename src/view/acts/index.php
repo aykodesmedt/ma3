@@ -13,28 +13,12 @@
   <div>
     <article class="home_voorstelling_article">
       <div>
+      <a href="index.php?page=detail&amp;id=21&amp;dag=2">
         <div class="home_voorstelling">
           <div class="home_voorstelling_foto">
             <span class="tag">Acrobatie</span>
             <span class="tag">Voorstelling</span>
             <img class="img--full" src="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg" alt="viva victor">
-            <!-- <picture>
-              <source srcset="./assets/img/acts/webp/024-cie-krak-viva-victor_home.webp 300w,
-                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,1x.webp 30w,
-                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,25x.webp 50w,
-                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,33x.webp 100w,
-                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,5x.webp 150w,
-                ./assets/img/acts/webp/024-cie-krak-viva-victor_home@0,75x.webp 280w"
-                sizes="100%" type="image/webp">
-              <source srcset="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg 300w,
-              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,1x.jpg 30w,
-              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,25x.jpg 50w,
-              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,33x.jpg 100w,
-              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,5x.jpg 150w,
-              ./assets/img/acts/jpg/024-cie-krak-viva-victor_home@0,75x.jpg 280w"
-                sizes="100%" type="image/jpeg">
-              <img class="img--full" src="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg" alt="viva victor">
-            </picture> -->
           </div>
 
           <div class="home_voorstelling_info">
@@ -44,23 +28,27 @@
             <a href="" class="meerWeten">MEER WETEN</a>
           </div>
         </div>
+      </a>
+
         <a href=""><span class="alleButton">Alle voorstellingen op zaterdag</span></a>
       </div>
     </article>
     <article class="home_straatact_article">
-      <div class="home_straatact">
-        <div class="home_straatact_foto">
-          <img src="./assets/img/kijker2_320.png" alt="FOTO">
+      <a href="index.php?page=detail&amp;id=27&amp;dag=2">
+        <div class="home_straatact">
+          <div class="home_straatact_foto">
+            <img src="./assets/img/kijker2_320.png" alt="FOTO">
+          </div>
+          <div class="home_straatact_info">
+            <span class="tag">Acrobatie</span>
+            <span class="tag">Straatact</span>
+            <h3 class="act_name">Vogelbaum und Blütenfee</h3>
+            <p class="group_name">by Pantao</p>
+            <p class="hours">13.45 - 15.45</p>
+            <a href="" class="meerWeten">MEER WETEN</a>
+          </div>
         </div>
-        <div class="home_straatact_info">
-          <span class="tag">Acrobatie</span>
-          <span class="tag">Straatact</span>
-          <h3 class="act_name">Vogelbaum und Blütenfee</h3>
-          <p class="group_name">by Pantao</p>
-          <p class="hours">13.45 - 15.45</p>
-          <a href="" class="meerWeten">MEER WETEN</a>
-        </div>
-      </div>
+      </a>
       <a href=""><span class="alleButton">Alle straatacts op zaterdag</span></a>
     </article>
   </div>

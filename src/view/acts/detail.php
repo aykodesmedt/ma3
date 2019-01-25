@@ -1,14 +1,14 @@
 <?php
   // var_dump($act[0]);
   // var_dump($_GET['dag']);
-  var_dump($act[0]['id']);
+  // var_dump($act[0]['id']);
 ?>
 <section>
         <a href="index.php?page=programma">Terug naar overzicht</a> <img src="" alt="" />
         <h2><?php echo $act[0]['name_act']; ?></h2>
         <h3><?php echo $act[0]['name_group']; ?></h3>
-        <p><?php echo $act[0]['tag']; ?></p>
-        <p><?php echo $act[0]['tag']; ?></p>
+        <span class="tag"><?php echo $act[0]['soort_act']; ?></span>
+        <span class="tag"><?php echo $act[0]['soort_act']; ?></span>
         <ul>
           <li>
             <img src="" alt="icon" />
@@ -33,7 +33,7 @@
         </ul>
         <div>
           <img src="" alt="" />
-          <h4>Over <?php echo $act[0]['titel']; ?></h4>
+          <h4>Over <?php echo $act[0]['name_group']; ?></h4>
           <p>
           <?php echo $act[0]['beschrijving']; ?>
           </p>
@@ -42,12 +42,12 @@
           <img src="" alt="" /> <img src="" alt="" /> <img src="" alt="" />
           <img src="" alt="" /> <img src="" alt="" /> <img src="" alt="" />
         </div>
-        <a href=""><img src="" alt="VIDEO"/></a>
+        <?php echo $act[0]['video']; ?>
       </section>
       <section>
         <h2>Ook vandaag</h2>
         <?php
-          var_dump($ook_vandaag);
+          // var_dump($ook_vandaag);
           foreach($ook_vandaag as $ookvandaag){
         ?>
             <article>

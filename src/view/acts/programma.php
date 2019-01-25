@@ -29,7 +29,7 @@
         }
       ?>
       />
-      <label for="switch_2_right">Zondag augustus</label>
+      <label for="switch_2_right">Zondag 26 augustus</label>
     </div>
     <div class="switch-field switch-soorten">
       <div class="switch-title">Soort:</div>

@@ -5,7 +5,6 @@ require_once( __DIR__ . '/DAO.php');
 class ActDAO extends DAO {
 
   public function search($dag = '', $act = ''){
-    // $sql = "SELECT * FROM `players` WHERE 1";
     $sql = "SELECT acts .*, isb_uren.locatie_id, isb_uren.uur, isb_dagen.dag, isb_dagen.id as dag_id
     FROM acts
     INNER JOIN isb_uren
@@ -25,7 +24,6 @@ class ActDAO extends DAO {
 
     $stmt = $this->pdo->prepare($sql);
 
-    // $stmt->bindValue(':dag','%'.$dag.'%');
     if (!empty($dag)) {
       $stmt->bindValue(':dag',$dag);
     }
@@ -47,25 +45,25 @@ class ActDAO extends DAO {
     ON isb_uren.dag_id = isb_dagen.id
     INNER JOIN isb_locatie
     ON isb_uren.locatie_id = isb_locatie.id
-    WHERE isb_uren.id = :id";
+    WHERE isb_uren.act_id = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectByDag($dagId, $exceptact, $max = 4){
+  public function selectByDag($dagId, $id, $max = 4){
     $sql = "SELECT acts .*, isb_uren.uur, isb_dagen.dag, isb_dagen.id as dag_id
     FROM acts
     INNER JOIN isb_uren
     ON acts.id = isb_uren.act_id
     INNER JOIN isb_dagen
     ON isb_uren.dag_id = isb_dagen.id
-    WHERE isb_uren.dag_id = :dag_id AND isb_uren.act_id != :exceptact
+    WHERE isb_uren.dag_id = :dag_id AND isb_uren.act_id != :id
     LIMIT :max";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':dag_id', $dagId);
-    $stmt->bindValue(':exceptact', $exceptact);
+    $stmt->bindValue(':id', $id);
     $stmt->bindValue(':max', $max);
     $stmt->execute();
     return $stmt->fetchALL(PDO::FETCH_ASSOC);
