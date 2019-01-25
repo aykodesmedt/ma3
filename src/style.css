@@ -128,11 +128,6 @@ nav a {
 
 @media screen and (max-width: 768px) {
 
-  .toggle + a,
-  .menu {
-    display: none;
-  }
-
   .toggle {
     display: block;
     /* background-color: #254441; */
@@ -143,8 +138,51 @@ nav a {
     border: none;
   }
 
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    color: black;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: white;
+    font-size: 17px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+    color: red;
+  }
+
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+  nav a:hover {
+    color: red;
+  }
+
   .toggle:hover {
     color: red;
+  }
+
+  nav ul ul {
+    float: none;
+    position: static;
+    color: white;
+  }
+
+  nav ul li:hover > ul,
+  nav ul ul li:hover > ul {
+    display: none;
   }
 
   [id^='drop']:checked + ul {
@@ -154,44 +192,6 @@ nav a {
   nav ul li {
     display: block;
     width: 100%;
-  }
-
-  nav ul ul .toggle,
-  nav ul ul a {
-    padding: 0 40px;
-  }
-
-  nav ul ul ul a {
-    padding: 0 80px;
-  }
-
-  nav a:hover,
-  nav ul ul ul a {
-    color: #f00;
-  }
-
-  nav ul li ul li .toggle,
-  nav ul ul a,
-  nav ul ul ul a {
-    padding: 14px 20px;
-    color: #fff;
-    font-size: 17px;
-  }
-
-  nav ul li ul li .toggle,
-  nav ul ul a {
-    color: #000;
-  }
-
-  nav ul ul {
-    float: none;
-    position: static;
-    color: #fff;
-  }
-
-  nav ul ul li:hover > ul,
-  nav ul li:hover > ul {
-    display: none;
   }
 
   nav ul ul li {

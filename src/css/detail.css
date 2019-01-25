@@ -1,5 +1,32 @@
 /* detail */
 
+.detail__div__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'actFoto actTitel'
+    'actInfo actOver';
+}
+
+.detail__div__foto {
+  grid-area: actFoto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__div__titels {
+  grid-area: actTitel;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  text-align: right;
+}
+
 .section__ookvandaag {
   margin: 2rem 1rem;
   width: 100vw;
@@ -14,4 +41,62 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.detail_list_icon {
+  background-image: url(./../assets/img/detail_gegevens_1440.png);
+  width: 33.7rem;
+  height: 31.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__div__actinfo {
+  grid-area: actInfo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_listitem_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.detail__name_act {
+  font-size: 4.8rem;
+}
+
+.detail__name_group {
+  font-size: 3.6rem;
+}
+
+.detail__titel_beschrijving_act {
+  font-size: 3.6rem;
+}
+
+.detail__beschrijving_act {
+  font-size: 2rem;
+}
+
+.detail__beschrijving__div {
+  grid-area: actOver;
+  display: flex;
+  flex-direction: row;
+  width: 60rem;
+}
+
+.video__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./../assets/img/detail_video_1440.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100rem;
 }
