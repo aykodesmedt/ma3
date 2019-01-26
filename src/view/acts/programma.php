@@ -31,8 +31,8 @@
       />
       <label for="switch_2_right">Zondag 26 augustus</label>
     </div>
+    <hr/>
     <div class="switch-field switch-soorten">
-      <div class="switch-title">Soort:</div>
       <input type="radio" id="switch_3_left" name="act" value=""
       checked
       />
@@ -56,7 +56,7 @@
         <label for="switch_3_right">Straatacts</label>
       </div>
     </div>
-    <input type="submit" value="filter">
+    <input type="submit" value="Filter" class="button--filter-submit">
 </form>
 <section class="section--slechtweer">
   <img src="" alt="" />
@@ -72,26 +72,27 @@
       foreach($acts as $act){
         ?>
           <li>
-            <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
               <article class="article--resultaat">
-                <div class="container--resultaat-img">
-                  <img src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
-                  <span class="page--tag">Acrobatie</span>
-                </div>
+                <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
+
+                  <div class="container--resultaat-img">
+                    <img src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
+                    <span class="page--tag">Acrobatie</span>
+                  </div>
+                </a>
                 <div class="container--resultaat-info">
                   <h3 class="title--resultaat-name-act"><?php echo $act['name_act'];?></h3>
                   <p class="title--resultaat-name-group"><?php echo $act['name_group'];?></p>
                   <p class="p--resultaat-uur"><?php echo $act['uur'];?></p>
-                  <a href="" class="link--meerWeten">MEER WETEN</a>
+                  <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>" class="link--meerWeten">MEER WETEN</a>
                 </div>
                 <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="">
               </article>
-            </a>
+
 
           </li>
         <?php
       }
     ?>
   </ul>
-  <p class="meer_resultaten">meer resultaten laden</p>
 </section>

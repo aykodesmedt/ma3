@@ -3,7 +3,7 @@
   // var_dump($_GET['dag']);
   // var_dump($act[0]['id']);
 ?>
-<a href="index.php?page=programma">Terug naar overzicht</a>
+<a href="index.php?page=programma&action=filter&dag=<?php echo $act[0]['dag_id']; ?>&act=<?php echo $act[0]['soort_act']; ?>">Terug naar overzicht</a>
 <section>
   <div class="detail--div-grid">
     <div class="detail--div-foto">
@@ -13,55 +13,70 @@
       <div>
         <h2 class="detail__name_act"><?php echo $act[0]['name_act']; ?></h2>
         <h3 class="detail__name_group"><?php echo $act[0]['name_group']; ?></h3>
-        <div>
+        <div class="page--div-tag">
           <span class="page--tag"><?php echo $act[0]['soort_act']; ?></span>
           <span class="page--tag"><?php echo $act[0]['soort_act']; ?></span>
         </div>
       </div>
     </div>
     <div class="detail__div__actinfo">
-      <?php
-        foreach($act as $actje):
-      ?>
+
         <div class="detail--container-icons">
           <ul>
-            <li class="detail--listitem-icon">
-              <img src="./assets/img/icons/icon_date.png" alt="icon" />
+          <?php
+            foreach($act as $actje):
+          ?>
+            <li class="detail--listitem-icon detail--dag">
               <p><?php echo $actje['dag']; ?></p>
             </li>
-            <li class="detail--listitem-icon">
-              <img src="./assets/img/icons/icon_time.png" alt="icon" />
-              <p><?php echo $actje['uur']; ?></p>
-            </li>
-            <li class="detail--listitem-icon">
-              <img src="./assets/img/icons/icon_location.png" alt="icon" />
-              <p><?php echo $actje['locatie']; ?></p>
-            </li>
+            <div class="detail--container-listitem-icon detail--daginfo">
+              <li class="detail--listitem-icon">
+                <img src="./assets/img/icons/icon_time.png" alt="icon" />
+                <p><?php echo $actje['uur']; ?></p>
+              </li>
+              <li class="detail--listitem-icon">
+                <img src="./assets/img/icons/icon_location.png" alt="icon" />
+                <p><?php echo $actje['locatie']; ?></p>
+              </li>
+            </div>
+
+          <?php
+            endforeach;
+          ?>
+          <hr/>
+          <?php
+            if(!empty($act[0]['website'])):
+          ?>
             <li class="detail--listitem-icon">
               <img src="./assets/img/icons/icon_website.png" alt="icon" />
-              <p><?php echo $actje['website']; ?></p>
+              <a href="https://<?php echo $act[0]['website']; ?>">
+                <p><?php echo $act[0]['website']; ?></p>
+              </a>
             </li>
+          <?php
+            endif;
+          ?>
             <li class="detail--listitem-icon">
               <img src="./assets/img/icons/icon_world.png" alt="icon" />
-              <p><?php echo $actje['land']; ?></p>
+              <p><?php echo $act[0]['land']; ?></p>
             </li>
           </ul>
         </div>
-      <?php
-        endforeach;
-      ?>
+
+
     </div>
     <div class="detail--div-beschrijving">
-      <img src="./assets/img/detail_beschrijving_1440.png" alt="" />
+      <div class="detail--div-beschrijving-foto">
+        <p></p>
+      </div>
       <div>
-        <h4 class="detail_--title-beschrijving-act">Over <?php echo $act[0]['name_group']; ?></h4>
+        <h4 class="detail--title-beschrijving-act">Over <?php echo $act[0]['name_group']; ?></h4>
         <p class="detail--beschrijving-act">
         <?php echo $act[0]['beschrijving']; ?>
         </p>
       </div>
     </div>
   </div>
-
   <div class="container--scrollfoto">
     <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
     <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
@@ -70,9 +85,16 @@
     <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
     <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
   </div>
+
+  <?php
+    if($act[0]['video'] !== ''){
+  ?>
   <div class="container--video">
     <?php echo $act[0]['video']; ?>
   </div>
+  <?php
+    }
+  ?>
 </section>
 <section class="title--ookvandaag">
   <h2 class="page--title-underlined">Ook vandaag</h2>

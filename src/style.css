@@ -25,11 +25,13 @@ a {
 }
 
 main {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100vw;
 }
 
 .hidden {
@@ -38,7 +40,7 @@ main {
 }
 
 .page--title-underlined {
-  /* width: 100%; */
+  font-family: Gobold, Arial, Helvetica, sans-serif;
   font-size: 4.8rem;
   background-repeat: no-repeat;
   background-position-y: 3rem;
@@ -62,12 +64,16 @@ main {
 
   @media (--xl) {
     background-image: url(./assets/img/titel_1440.png);
-    /* width: 127.3rem; */
-    width: 100vw;
+    width: 127.3rem;
   }
 }
 
+.page--div-tag {
+  margin-top: 1rem;
+}
+
 .page--tag {
+  margin-top: 1rem;
   font-size: 1.8rem;
   color: white;
   padding: .5rem 1rem;
@@ -80,6 +86,7 @@ main {
 }
 
 footer {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,4 +206,9 @@ footer {
 
 .footer--article > p {
   padding-top: 2rem;
+}
+
+.page--highlight {
+  color: var(--blauwgroen);
+  font-style: italic;
 }

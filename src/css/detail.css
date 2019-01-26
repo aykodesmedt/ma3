@@ -2,11 +2,25 @@
 
 .detail--div-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-    'actFoto actTitel'
-    'actInfo actOver';
+  grid-gap: 1rem;
+
+  @media (--sm) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      'actFoto'
+      'actTitel'
+      'actInfo'
+      'actOver';
+  }
+
+  @media (--lg) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      'actFoto actTitel'
+      'actInfo actOver';
+  }
 }
 
 .detail--div-foto {
@@ -21,26 +35,64 @@
   grid-area: actTitel;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   padding: 2rem;
-  text-align: right;
+
+  @media (--sm) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (--lg) {
+    justify-content: flex-end;
+    text-align: right;
+  }
 }
 
 .detail--container-icons {
-  background-image: url(./../assets/img/detail_gegevens_1440.png);
-  width: 33.7rem;
-  height: 31.3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+
+  @media (--sm) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid var(--paars);
+  }
 }
 
 .detail--listitem-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.detail--daginfo {
+  margin: 2rem 0;
+}
+
+.detail--dag {
+  @media (--sm) {
+    margin: -1rem 0;
+    height: 6rem;
+    background-color: var(--paars);
+  }
+}
+
+hr {
+  border-color: black;
+}
+
+.detail--container-listitem-icon {
+  @media (--sm) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .detail__div__actinfo {
@@ -61,17 +113,64 @@
 
 .detail--title-beschrijving-act {
   font-size: 3.6rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
 }
 
 .detail--beschrijving-act {
   font-size: 2rem;
+  padding-left: 2rem;
 }
 
 .detail--div-beschrijving {
   grid-area: actOver;
-  display: flex;
-  flex-direction: row;
-  width: 60rem;
+  display: grid;
+  height: auto;
+
+  @media (--sm) {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    margin-left: 5rem;
+  }
+
+  @media (--md) {
+    width: 80vw;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    margin-left: 5rem;
+  }
+
+  @media (--lg) {
+    width: 40vw;
+  }
+}
+
+.detail--div-beschrijving-foto {
+  @media (--sm) {
+    background-image: url(./../assets/img/detail_beschrijving_320.png);
+    height: 3rem;
+    background-repeat: repeat-x;
+  }
+
+  @media (--md) {
+    background-image: url(./../assets/img/detail_beschrijving_768.png);
+    background-repeat: repeat-y;
+    width: 2.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  @media (--lg) {
+    background-image: url(./../assets/img/detail_beschrijving_1024.png);
+  }
+
+  @media (--xl) {
+    background-image: url(./../assets/img/detail_beschrijving_1440.png);
+    width: 7rem;
+  }
 }
 
 .container--video {
@@ -86,7 +185,7 @@
 }
 
 .container--scrollfoto {
-  margin: 2rem 1rem;
+  margin: 5rem auto;
   width: 100vw;
   display: grid;
   grid-gap: 1rem;

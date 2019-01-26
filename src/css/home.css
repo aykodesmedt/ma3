@@ -106,6 +106,12 @@
   grid-area: kijker1;
 }
 
+.container--voorstelling-plaats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container--div-voorstelling {
   display: flex;
 
@@ -136,10 +142,13 @@
 
   @media (--sm) {
     background-image: url(./../assets/img/kijker1_320.png);
+    /* margin-top: -2rem; */
   }
 
   @media (--md) {
     background-image: url(./../assets/img/kijker1_768.png);
+    margin-top: 3rem;
+    margin-left: -3rem;
   }
 
   @media (--md) {
@@ -189,9 +198,13 @@
 .container--div-straatact-info {
   background-color: var(--blauwgroen);
   padding: 2rem 2rem 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   @media (--sm) {
-    width: 25rem;
+    width: 30rem;
     height: 22rem;
   }
 
@@ -207,6 +220,14 @@
   border-color: var(--paars);
   border-radius: 25rem;
   padding: .5rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.container--voorstelling-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 14rem;
 }
 
 .section--isb-over {
@@ -279,31 +300,37 @@
     font-size: 2rem;
     border-left: .5rem solid;
     border-color: black;
-    padding: 4rem;
+    padding-left: 4rem;
   }
 }
 
 .section--vrijwilligers {
   margin-bottom: 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: 1rem;
 
   @media (--sm) {
     background-image: url(./../assets/img/vrijwilliger_320.png);
+    background-position: center;
+    background-position-y: 1rem;
+    margin-left: 0;
   }
 
   @media (--md) {
     background-image: url(./../assets/img/vrijwilliger_768.png);
+    width: 53.3rem;
+    background-position-x: .15rem;
+    background-position-y: 1rem;
+    margin-top: 4rem;
+    margin-left: -15rem;
   }
 
   @media (--lg) {
     background-image: url(./../assets/img/vrijwilliger_1024.png);
+    margin-left: -43rem;
   }
 
   @media (--xl) {
@@ -330,15 +357,39 @@
 
   @media (--sm) {
     width: 30.3rem;
-    height: 42.9rem;
+    height: 55rem;
     /* margin-left: 2rem; */
+  }
+
+  @media (--md) {
+    width: 52.2rem;
+    height: 35rem;
+    margin-left: 12rem;
   }
 
   @media (--lg) {
     width: 73.7rem;
-    height: 23.9rem;
+    height: 29rem;
     margin-left: 20rem;
   }
+}
+
+.voorwaarden {
+  @media (--sm) {
+    margin-left: 10rem;
+  }
+
+  @media (--md) {
+    margin-left: 40rem;
+  }
+
+  @media (--lg) {
+    margin-left: 70rem;
+  }
+}
+
+.section--andereevenementen {
+  width: 130rem;
 }
 
 .container--evenementen {
@@ -356,14 +407,14 @@
 
   @media (--md) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
       'event1 event2'
       'event3 event4';
   }
 
   @media (--xl) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     grid-template-areas: 'event1 event2 event3 event4';
   }
 }
@@ -398,8 +449,8 @@
 
   @media (--md) {
     width: 30rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5rem 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 7rem 1fr;
 
     grid-template-areas:
       'event_foto'
