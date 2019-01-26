@@ -2,8 +2,6 @@
 
 .switch-field {
   font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  /* padding: 40px; */
-  /* overflow: hidden; */
 }
 
 .switch-dagen {
@@ -27,8 +25,6 @@
 
 .switch-field label {
   float: left;
-  /* display: inline-block; */
-  /* width: 60px; */
   background-color: #e4e4e4;
   color: rgba(0, 0, 0, .6);
   font-size: 14px;
@@ -38,16 +34,8 @@
   padding: 6px 14px;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 25rem;
-  /* padding: 1rem; */
   margin: 1rem;
-  /* -webkit-box-shadow:
-    inset 0 1px 3px rgba(0, 0, 0, .3),
-    0 1px rgba(255, 255, 255, .1); */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, .3), 0 1px rgba(255, 255, 255, .1);
-  /* -webkit-transition: all .1s ease-in-out; */
-  /* -moz-transition: all .1s ease-in-out; */
-  /* -ms-transition: all .1s ease-in-out; */
-  /* -o-transition: all .1s ease-in-out; */
   transition: all .1s ease-in-out;
 }
 
@@ -60,19 +48,15 @@
   box-shadow: none;
 }
 
-.slecht_weer {
+.section--slechtweer {
   font-size: 1.6rem;
 }
 
-/* .resultaten_section {
-  display: grid;
-} */
-
-.resultaat {
+.article--resultaat {
   width: 30rem;
 }
 
-.resultaten_grid {
+.grid--resultaten {
   display: grid;
 
   @media (--sm) {
@@ -92,33 +76,33 @@
   }
 }
 
-.streep {
+.decoratie--streep {
   margin-top: -30rem;
 }
 
-.resultaat_foto {
+.container--resultaat-img {
   width: 30rem;
   height: 30rem;
 }
 
-.resultaat_info {
+.container--resultaat-info {
   height: 30rem;
   padding-top: 10rem;
   padding-left: 3rem;
   margin-top: -8rem;
 }
 
-.resultaat_info_act {
+.title--resultaat-name-act {
   font-size: 2.5rem;
   padding: .5rem;
 }
 
-.resultaat_info_group {
+.title--resultaat-name-group {
   font-size: 1.8rem;
   padding: .5rem;
 }
 
-.resultaat_info_hour {
+.p--resultaat-uur {
   font-size: 2rem;
   padding: .5rem;
 }

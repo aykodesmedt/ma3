@@ -10,13 +10,12 @@
   </head>
   <body>
     <header>
-        <!-- <a href="index.php"><img src="./assets/img/logo_klein_1440.png" alt="logoKlein"/></a> -->
         <nav>
           <a href="index.php" class="logo">
             <h1 class="hidden">ISB - logo</h1>
             <img src="./assets/img/logo_klein_320.png" alt="logoKlein">
           </a>
-          <ul class="menu_list">
+          <ul class="menu--list_item">
             <li>
               <a href="index.php?page=programma"
               class="
@@ -43,25 +42,25 @@
       <?php echo $content; ?>
     </main>
     <footer>
-      <div class="footer_text">
-        <article class="footer_article_opdehoogte">
-          <h2 class="footer_title">Blijf op de hoogte!</h2>
+      <div class="container--footer">
+        <article class="footer--article-opdehoogte">
+          <h2 class="footer--title">Blijf op de hoogte!</h2>
           <img src="./assets/img/fb-logo.png" alt="">
         </article>
-        <div class="footer_article_rest">
-          <article class="footer_article">
-            <h2 class="footer_title">Algemeen</h2>
+        <div class="footer--article-info">
+          <article class="footer--article">
+            <h2 class="footer--title">Algemeen</h2>
             <p>Programma</p>
             <p>Bij slecht weer</p>
           </article>
-          <article class="footer_article">
-            <h2 class="footer_title">Praktisch</h2>
+          <article class="footer--article">
+            <h2 class="footer--title">Praktisch</h2>
             <p>Bereikbaarheid</p>
             <p>Toegankelijkheid</p>
             <p>Plan</p>
           </article>
-          <article class="footer_article">
-            <h2 class="footer_title">Organisatoren</h2>
+          <article class="footer--article">
+            <h2 class="footer--title">Organisatoren</h2>
             <p>Beveren Verbindt</p>
             <p>Vrijwilligers</p>
             <p>Partners</p>

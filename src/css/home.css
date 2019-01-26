@@ -11,7 +11,7 @@
   }
 }
 
-.header_datum {
+.header--p-datum {
   /* font-size: 4rem; */
 
   @media (--sm) {
@@ -19,7 +19,7 @@
   }
 }
 
-.header_editie {
+.header--p-editie {
   padding-top: .5rem;
   color: white;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@
   }
 }
 
-.header_gratis {
+.header--p-gratis {
   /* font-size: 3.4rem; */
 
   @media (--sm) {
@@ -60,7 +60,7 @@
   }
 }
 
-.familiedag {
+.section--familiedag {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +68,7 @@
   /* grid-template-columns: 1fr; */
 }
 
-.familiedag > div {
+.section--familiedag > div {
   display: grid;
   padding-top: 2rem;
 
@@ -100,13 +100,13 @@
   }
 }
 
-.home_voorstelling_article {
+.article--voorstelling {
   display: flex;
   flex-direction: column;
   grid-area: kijker1;
 }
 
-.home_voorstelling {
+.container--div-voorstelling {
   display: flex;
 
   @media (--sm) {
@@ -118,13 +118,13 @@
   }
 }
 
-.home_voorstelling_foto {
+.container--div-voorstelling-foto {
   width: 29rem;
   height: 29rem;
   background-image: url();
 }
 
-.home_voorstelling_info {
+.container--div-voorstelling-info {
   width: 25.2rem;
   height: 25.8rem;
   background-image: url(./../assets/img/kijker1_320.png);
@@ -151,29 +151,29 @@
   }
 }
 
-.act_name {
+.title--voorstelling-act {
   font-size: 2.5rem;
 }
 
-.group_name {
+.title--voorstelling-group {
   font-size: 1.8rem;
   font-style: italic;
 }
 
-.hours {
+.p--voorstelling-uren {
   font-size: 2rem;
 }
 
-.meerWeten {
+.link--meerWeten {
   font-size: 1.6rem;
   text-transform: capitalize;
 }
 
-.home_straatact_article {
+.article--straatact {
   grid-area: kijker2;
 }
 
-.home_straatact {
+.container--div-straatact {
   display: flex;
   align-items: center;
 
@@ -186,7 +186,7 @@
   }
 }
 
-.home_straatact_info {
+.container--div-straatact-info {
   background-color: var(--blauwgroen);
   padding: 2rem 2rem 2rem 6rem;
 
@@ -200,7 +200,7 @@
   }
 }
 
-.alleButton {
+.button--allevoorstellingen {
   font-size: 1.8rem;
   background-color: white;
   border: .2rem solid;
@@ -209,7 +209,7 @@
   padding: .5rem 1.5rem;
 }
 
-.over_isb {
+.section--isb-over {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -225,7 +225,7 @@
   }
 }
 
-.over_isb_titel {
+.title--isb-letters {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,7 +260,7 @@
   }
 }
 
-.over_isb_uitleg {
+.p--isb-uitleg {
   @media (--sm) {
     font-size: 1.8rem;
     padding: 1rem;
@@ -283,7 +283,7 @@
   }
 }
 
-.vrijwilligers {
+.section--vrijwilligers {
   margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
@@ -311,7 +311,7 @@
   }
 }
 
-.vrijwilliger_titel {
+.title--vrijwilligers {
   font-size: 7.2rem;
 
   @media (--sm) {
@@ -319,7 +319,7 @@
   }
 }
 
-.vrijwilliger_uitleg {
+.p--vrijwilligers {
   background-color: white;
   border: .2rem solid;
   border-color: var(--blauwgroen);
@@ -341,7 +341,7 @@
   }
 }
 
-.andere_evenementen {
+.container--evenementen {
   display: grid;
 
   @media (--sm) {
@@ -384,7 +384,7 @@
   grid-area: event4;
 }
 
-.ander_event {
+.article--evenementen {
   display: grid;
 
   @media (--sm) {
@@ -408,18 +408,18 @@
   }
 }
 
-.event_title {
+.title--evenement {
   grid-area: event_title;
   font-size: 2.4rem;
   text-align: center;
   padding-top: 1.5rem;
 }
 
-.event_foto {
+.container--evenement-foto {
   grid-area: event_foto;
 }
 
-.event_beschrijving {
+.container--evenement-beschrijving {
   grid-area: event_beschrijving;
   font-size: 1.4rem;
   line-height: 2.2rem;

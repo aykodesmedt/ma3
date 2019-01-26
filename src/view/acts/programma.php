@@ -58,33 +58,33 @@
     </div>
     <input type="submit" value="filter">
 </form>
-<section class="slecht_weer">
+<section class="section--slechtweer">
   <img src="" alt="" />
   <p>
     Bij slecht weer zal er een alternatief programma opgesteld worden dat
     door zal gaan in de gemeentelijke sporthal.
   </p>
 </section>
-<section class="resultaten_section">
-  <h2 class="title_underline">Resultaten</h2>
-  <ul class="resultaten_grid">
+<section>
+  <h2 class="page--title-underlined">Resultaten</h2>
+  <ul class="grid--resultaten">
     <?php
       foreach($acts as $act){
         ?>
           <li>
             <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
-              <article class="resultaat">
-                <div class="resultaat_foto">
-                <img class="img--full" src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
-                  <span class="tag">Acrobatie</span>
+              <article class="article--resultaat">
+                <div class="container--resultaat-img">
+                  <img src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
+                  <span class="page--tag">Acrobatie</span>
                 </div>
-                <div class="resultaat_info">
-                  <h3 class="resultaat_info_act"><?php echo $act['name_act'];?></h3>
-                  <p class="resultaat_info_group"><?php echo $act['name_group'];?></p>
-                  <p class="resultaat_info_hour"><?php echo $act['uur'];?></p>
-                  <a href="" class="meerWeten">MEER WETEN</a>
+                <div class="container--resultaat-info">
+                  <h3 class="title--resultaat-name-act"><?php echo $act['name_act'];?></h3>
+                  <p class="title--resultaat-name-group"><?php echo $act['name_group'];?></p>
+                  <p class="p--resultaat-uur"><?php echo $act['uur'];?></p>
+                  <a href="" class="link--meerWeten">MEER WETEN</a>
                 </div>
-                <img src="./assets/img/resultaat_320.png" class="streep" alt="">
+                <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="">
               </article>
             </a>
 

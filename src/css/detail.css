@@ -1,6 +1,6 @@
 /* detail */
 
-.detail__div__grid {
+.detail--div-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -9,7 +9,7 @@
     'actInfo actOver';
 }
 
-.detail__div__foto {
+.detail--div-foto {
   grid-area: actFoto;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.detail__div__titels {
+.detail--div-titels {
   grid-area: actTitel;
   display: flex;
   flex-direction: column;
@@ -27,29 +27,19 @@
   text-align: right;
 }
 
-.section__ookvandaag {
-  margin: 2rem 1rem;
-  width: 100vw;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(6, auto);
-  overflow: scroll;
-}
-
-.ookvandaagtitel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.detail_list_icon {
+.detail--container-icons {
   background-image: url(./../assets/img/detail_gegevens_1440.png);
   width: 33.7rem;
   height: 31.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.detail--listitem-icon {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -61,12 +51,6 @@
   align-items: center;
 }
 
-.detail_listitem_icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .detail__name_act {
   font-size: 4.8rem;
 }
@@ -75,22 +59,22 @@
   font-size: 3.6rem;
 }
 
-.detail__titel_beschrijving_act {
+.detail--title-beschrijving-act {
   font-size: 3.6rem;
 }
 
-.detail__beschrijving_act {
+.detail--beschrijving-act {
   font-size: 2rem;
 }
 
-.detail__beschrijving__div {
+.detail--div-beschrijving {
   grid-area: actOver;
   display: flex;
   flex-direction: row;
   width: 60rem;
 }
 
-.video__container {
+.container--video {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,4 +83,20 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 100rem;
+}
+
+.container--scrollfoto {
+  margin: 2rem 1rem;
+  width: 100vw;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, auto);
+  overflow: scroll;
+}
+
+.title--ookvandaag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
