@@ -4,9 +4,13 @@
     <p class="header--p-editie">13e editie</p>
     <p class="header--p-gratis">GRATIS</p>
   </div>
-  <h1 class="hidden">Internationaal Straattheaterfestival Beveren</h1>
-  <img src="./assets/img/logo_groot_320.png" alt="logoGroot" width="274" height="115">
-  <!-- <img src="" alt="maskers" /> -->
+  <div class="headerbeeld--images">
+    <h1 class="hidden">Internationaal Straattheaterfestival Beveren</h1>
+    <img class="headerbeeld--image1 image--klein" src="./assets/img/logo_groot_320.png" alt="logoGroot" width="274" height="115">
+    <img class="headerbeeld--image1 image--groot" src="./assets/img/logo_groot_1440.png" alt="logoGroot" width="717" height="299">
+    <img class="headerbeeld--image2 image--groot" src="./assets/img/headerbeeld.png" alt="headerbeeld">
+    <img class="headerbeeld--image2 image--klein" src="./assets/img/headerbeeld_320.png" alt="headerbeeld">
+  </div>
 </section>
 <section class="section--familiedag">
   <h2 class="page--title-underlined home_titel">Zaterdag Familiedag</h2>
@@ -16,8 +20,8 @@
           <div class="container--div-voorstelling">
             <a href="index.php?page=detail&amp;id=21&amp;dag=2">
               <div class="container--div-voorstelling-foto">
-                <span class="page--tag">Acrobatie</span>
-                <span class="page--tag">Voorstelling</span>
+                <span class="page--tag page--tag-home tag-1">Acrobatie</span>
+                <span class="page--tag page--tag-home tag-2">Voorstelling</span>
                 <img src="./assets/img/acts/jpg/024-cie-krak-viva-victor_home.jpg" alt="viva victor">
               </div>
             </a>
@@ -31,7 +35,7 @@
             </div>
           </div>
 
-        <a href="index.php?page=programma&action=filter&dag=2&act=voorstelling" class="button--allevoorstellingen"><span >Alle voorstellingen op zaterdag</span></a>
+        <a href="index.php?page=programma&action=filter&dag=2&act=voorstelling" class="button--allevoorstellingen"><span>Alle voorstellingen op zaterdag</span></a>
       </div>
     </article>
     <article class="article--straatact">
@@ -92,7 +96,7 @@
         <span class="page--tag">25/6</span>
         <picture>
           <source srcset="./assets/img/andere_evenementen/webp/gekkefietsencircuit.webp 300w,
-            ./assets/img/andere_evenementen/webp/gekkefietsencircuit@0,85x.webp 250w,
+            ./assets/img/andere_evenementen/webp/gekkefietsencircuit@0,85x.webp 255w,
             ./assets/img/andere_evenementen/webp/gekkefietsencircuit@0,5x.webp 150w,
             ./assets/img/andere_evenementen/webp/gekkefietsencircuit@0,33x.webp 99w"
             sizes="
@@ -101,7 +105,7 @@
             (min-width: 320px) 5vw"
             type="image/webp">
           <source srcset="./assets/img/andere_evenementen/jpg/gekkefietsencircuit.jpg 300w,
-          ./assets/img/andere_evenementen/jpg/gekkefietsencircuit@0,85x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/gekkefietsencircuit@0,85x.jpg 255w,
           ./assets/img/andere_evenementen/jpg/gekkefietsencircuit@0,5x.jpg 150w,
           ./assets/img/andere_evenementen/jpg/gekkefietsencircuit@0,33x.jpg 99w"
             sizes="
@@ -128,7 +132,7 @@
         <!-- <img class="img--full" src="./assets/img/andere_evenementen/jpg/olympischestraat.jpg" alt="olympischestraat" width="300" height="300"> -->
         <picture>
         <source srcset="./assets/img/andere_evenementen/webp/olympischestraat.webp 300w,
-            ./assets/img/andere_evenementen/webp/olympischestraat@0,85x.webp 250w,
+            ./assets/img/andere_evenementen/webp/olympischestraat@0,85x.webp 255w,
             ./assets/img/andere_evenementen/webp/olympischestraat@0,5x.webp 150w,
             ./assets/img/andere_evenementen/webp/olympischestraat@0,33x.webp 99w"
             sizes="
@@ -137,7 +141,7 @@
             (min-width: 320px) 5vw"
             type="image/webp">
           <source srcset="./assets/img/andere_evenementen/jpg/olympischestraat.jpg 300w,
-          ./assets/img/andere_evenementen/jpg/olympischestraat@0,85x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/olympischestraat@0,85x.jpg 255w,
           ./assets/img/andere_evenementen/jpg/olympischestraat@0,5x.jpg 150w,
           ./assets/img/andere_evenementen/jpg/olympischestraat@0,33x.jpg 99w"
             sizes="
@@ -163,7 +167,7 @@
         <span class="page--tag">25/6</span>
         <picture>
         <source srcset="./assets/img/andere_evenementen/webp/avondfeestmarkt.webp 300w,
-            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,85x.webp 250w,
+            ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,85x.webp 255w,
             ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,5x.webp 150w,
             ./assets/img/andere_evenementen/webp/avondfeestmarkt@0,33x.webp 99w"
             sizes="
@@ -172,7 +176,7 @@
             (min-width: 320px) 5vw"
             type="image/webp">
           <source srcset="./assets/img/andere_evenementen/jpg/avondfeestmarkt.jpg 300w,
-          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,85x.jpg 250w,
+          ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,85x.jpg 255w,
           ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,5x.jpg 150w,
           ./assets/img/andere_evenementen/jpg/avondfeestmarkt@0,33x.jpg 99w"
             sizes="
@@ -188,7 +192,7 @@
         <p>
           Het centrum van Beveren wordt opnieuw omgetoverd tot één grote
           feestmarkt. Op en rond de Grote Markt en in de voornaamste
-          winkelstraten staan tal van marktkramers opgesteld. Ook de
+          winkelstraten staan tal van marktkramers opgesteld. <br/>Ook de
           handelaars uit het centrum van Beveren..
         </p>
         <a href="" class="link--meerWeten">MEER WETEN</a>
@@ -199,8 +203,9 @@
 
         <span class="page--tag">25/6</span>
         <picture>
-          <source srcset="./assets/img/andere_evenementen/webp/rommelmarkt.webp 300w,
-            ./assets/img/andere_evenementen/webp/rommelmarkt@0,85x.webp 250w,
+          <source
+            srcset="./assets/img/andere_evenementen/webp/rommelmarkt.webp 300w,
+            ./assets/img/andere_evenementen/webp/rommelmarkt@0,85x.webp 255w,
             ./assets/img/andere_evenementen/webp/rommelmarkt@0,5x.webp 150w,
             ./assets/img/andere_evenementen/webp/rommelmarkt@0,33x.webp 99w"
             sizes="
@@ -208,10 +213,11 @@
             (min-width: 768px) 10vw,
             (min-width: 320px) 5vw"
             type="image/webp">
-          <source srcset="./assets/img/andere_evenementen/jpg/rommelmarkt.jpg 300w,
-          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,85x.jpg 250w,
-          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,5x.jpg 150w,
-          ./assets/img/andere_evenementen/jpg/rommelmarkt@0,33x.jpg 99w"
+          <source
+            srcset="./assets/img/andere_evenementen/jpg/rommelmarkt.jpg 300w,
+            ./assets/img/andere_evenementen/jpg/rommelmarkt@0,85x.jpg 255w,
+            ./assets/img/andere_evenementen/jpg/rommelmarkt@0,5x.jpg 150w,
+            ./assets/img/andere_evenementen/jpg/rommelmarkt@0,33x.jpg 99w"
             sizes="
             (min-width: 1024px) 50vw,
             (min-width: 768px) 10vw,

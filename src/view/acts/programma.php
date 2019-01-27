@@ -1,7 +1,7 @@
 <?php
   // var_dump($acts);
 ?>
-<form class="form" action="index.php?page=programma">
+<form class="filter--form" action="index.php?page=programma">
     <input type="hidden" name="page" value="programma" />
     <input type="hidden" name="action" value="filter" />
 
@@ -66,7 +66,7 @@
   </p>
 </section>
 <section>
-  <h2 class="page--title-underlined">Resultaten</h2>
+  <h2 class="page--title-underlined">Resultaten (<?php echo COUNT($acts); ?>)</h2>
   <ul class="grid--resultaten">
     <?php
       foreach($acts as $act){
@@ -76,8 +76,9 @@
                 <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
 
                   <div class="container--resultaat-img">
+                    <span class="page--tag page--tag-results"><?php echo $act['locatie']; ?></span>
                     <img src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
-                    <span class="page--tag">Acrobatie</span>
+
                   </div>
                 </a>
                 <div class="container--resultaat-info">
@@ -88,8 +89,6 @@
                 </div>
                 <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="">
               </article>
-
-
           </li>
         <?php
       }

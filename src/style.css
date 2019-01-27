@@ -40,6 +40,7 @@ main {
 }
 
 .page--title-underlined {
+  height: 5rem;
   font-family: Gobold, Arial, Helvetica, sans-serif;
   font-size: 4.8rem;
   background-repeat: no-repeat;
@@ -50,6 +51,7 @@ main {
     background-image: url(./assets/img/titel_320.png);
     width: 31.2rem;
     background-position-y: 2rem;
+    margin-top: 5rem;
   }
 
   @media (--md) {
@@ -73,16 +75,34 @@ main {
 }
 
 .page--tag {
-  margin-top: 1rem;
   font-size: 1.8rem;
   color: white;
   padding: .5rem 1rem;
   background-color: var(--rood);
   border-radius: 1rem;
+  margin-top: 1rem;
 
   @media (--sm) {
     font-size: 1.6rem;
   }
+}
+
+.page--tag-results {
+  position: absolute;
+  margin-left: 1rem;
+}
+
+.page--tag-home {
+  position: absolute;
+  margin-top: 1rem;
+}
+
+.tag-1 {
+  margin-left: 1rem;
+}
+
+.tag-2 {
+  margin-left: 11rem;
 }
 
 footer {
@@ -208,7 +228,38 @@ footer {
   padding-top: 2rem;
 }
 
+.footer--article > a {
+  padding-top: 2rem;
+}
+
 .page--highlight {
-  color: var(--blauwgroen);
+  background-color: var(--blauwgroen);
   font-style: italic;
+}
+
+.footer--kleinetekst {
+  display: flex;
+
+  @media (--sm) {
+    flex-direction: column;
+  }
+
+  @media (--lg) {
+    flex-direction: row;
+  }
+}
+
+.footer--kleinetekst > p {
+  @media (--sm) {
+    margin-top: 1rem;
+  }
+
+  @media (--lg) {
+    margin-left: 1rem;
+  }
+}
+
+.footer--slechtweer {
+  display: flex;
+  flex-direction: column;
 }

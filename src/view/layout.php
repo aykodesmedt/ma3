@@ -44,7 +44,7 @@
               ">Programma</a>
             </li>
             <li>
-              <label for="drop" class="toggle">Meer</label>
+              <label for="drop" class="toggle">Meer <img src="./assets/img/dropdown.png" alt=""></label>
               <input type="checkbox" id="drop" />
                 <ul class="menu">
                   <li><a href="#">Flashback</a></li>
@@ -65,10 +65,10 @@
           <img src="./assets/img/fb-logo.png" alt="">
         </article>
         <div class="footer--article-info">
-          <article class="footer--article">
+          <article class="footer--article footer--slechtweer">
             <h2 class="footer--title">Algemeen</h2>
-            <p>Programma</p>
-            <p>Bij slecht weer</p>
+            <a href="index.php?page=programma">Programma</a>
+            <a href="index.php?page=programma">Bij slecht weer</a>
           </article>
           <article class="footer--article">
             <h2 class="footer--title">Praktisch</h2>
@@ -76,15 +76,18 @@
             <p>Toegankelijkheid</p>
             <p>Plan</p>
           </article>
-          <article class="footer--article">
+          <article class="footer--article footer--slechtweer">
             <h2 class="footer--title">Organisatoren</h2>
-            <p>Beveren Verbindt</p>
+            <a href="http://beverse-feesten.be/">Beveren Verbindt</a>
             <p>Vrijwilligers</p>
             <p>Partners</p>
           </article>
         </div>
       </div>
-      <p>&copy;Ayko De Smedt 2019  MAIII</p>
+      <div class="footer--kleinetekst">
+        <p>Privacy Policy</p>
+        <p>&copy;Ayko De Smedt 2019  MAIII</p>
+      </div>
     </footer>
     <?php echo $js; ?>
   </body>

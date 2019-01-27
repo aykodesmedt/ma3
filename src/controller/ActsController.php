@@ -34,6 +34,12 @@ class ActsController extends Controller {
     }
 
     $this->set('acts', $acts);
+
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode($acts);
+      exit();
+    }
   }
 
   public function detail() {
@@ -41,7 +47,10 @@ class ActsController extends Controller {
 
     if(!empty($_GET['id'])){
       $act = $this->actDAO->selectById($_GET['id']);
+      $images = $this->actDAO->selectImagesById($_GET['id']);
+
       $this->set('act', $act);
+      $this->set('images', $images);
     }
 
     if(empty($act)){

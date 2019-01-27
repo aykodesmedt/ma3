@@ -3,7 +3,9 @@
   // var_dump($_GET['dag']);
   // var_dump($act[0]['id']);
 ?>
-<a href="index.php?page=programma&action=filter&dag=<?php echo $act[0]['dag_id']; ?>&act=<?php echo $act[0]['soort_act']; ?>">Terug naar overzicht</a>
+<a href="index.php?page=programma&action=filter&dag=<?php echo $act[0]['dag_id']; ?>&act=<?php echo $act[0]['soort_act']; ?>" class="page--backtofilter">
+  <img src="./assets/img/icons/back.png" alt="iconback">
+</a>
 <section>
   <div class="detail--div-grid">
     <div class="detail--div-foto">
@@ -14,7 +16,6 @@
         <h2 class="detail__name_act"><?php echo $act[0]['name_act']; ?></h2>
         <h3 class="detail__name_group"><?php echo $act[0]['name_group']; ?></h3>
         <div class="page--div-tag">
-          <span class="page--tag"><?php echo $act[0]['soort_act']; ?></span>
           <span class="page--tag"><?php echo $act[0]['soort_act']; ?></span>
         </div>
       </div>
@@ -31,11 +32,11 @@
             </li>
             <div class="detail--container-listitem-icon detail--daginfo">
               <li class="detail--listitem-icon">
-                <img src="./assets/img/icons/icon_time.png" alt="icon" />
+                <img src="./assets/img/icons/icon_time.png" alt="icontime" />
                 <p><?php echo $actje['uur']; ?></p>
               </li>
               <li class="detail--listitem-icon">
-                <img src="./assets/img/icons/icon_location.png" alt="icon" />
+                <img src="./assets/img/icons/icon_location.png" alt="iconlocation" />
                 <p><?php echo $actje['locatie']; ?></p>
               </li>
             </div>
@@ -47,7 +48,7 @@
           <?php
             if(!empty($act[0]['website'])):
           ?>
-            <li class="detail--listitem-icon">
+            <li class="detail--listitem-icon website">
               <img src="./assets/img/icons/icon_website.png" alt="icon" />
               <a href="https://<?php echo $act[0]['website']; ?>">
                 <p><?php echo $act[0]['website']; ?></p>
@@ -77,14 +78,21 @@
       </div>
     </div>
   </div>
-  <div class="container--scrollfoto">
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-    <img src="./assets/img/acts/jpg/maschara.jpg" alt="" />
-  </div>
+  <?php
+    if(!empty($images)):
+  ?>
+    <div class="container--scrollfoto">
+      <?php
+        foreach($images as $image):
+      ?>
+        <img src="./assets/img/acts/actimages/jpg/<?php echo $image['imagepath']; ?>.jpg" alt="" />
+      <?php
+        endforeach;
+      ?>
+    </div>
+  <?php
+    endif;
+  ?>
 
   <?php
     if($act[0]['video'] !== ''){

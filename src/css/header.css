@@ -1,7 +1,11 @@
 @import './vars.css';
 
 header {
-  display: flex;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-between;
 
@@ -14,25 +18,39 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
 }
 
 .menu--list_item {
-  /* width: 104.5rem; */
   width: 50rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (--sm) {
     width: 32rem;
     font-size: 1.8rem;
     padding: 2rem 0;
   }
+
+  @media (--md) {
+    width: 52rem;
+    justify-content: center;
+  }
+
+  @media (--lg) {
+    width: 60rem;
+  }
 }
 
 .menu_active {
-  text-decoration: underline;
+  color: var(--blauwgroen);
+  /* text-decoration: underline; */
+  height: 5rem;
+  background-image: url(./../assets/img/menu_active_320.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 3.5rem;
 }
 
 /* navigation */
@@ -72,68 +90,39 @@ h1 {
 
 nav a {
   display: block;
-  padding: 14px 20px;
+  padding: 14px;
   color: black;
   font-size: 17px;
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .toggle {
     display: block;
-    /* background-color: #254441; */
-    padding: 14px 20px;
+    padding: 14px;
     color: black;
     font-size: 17px;
     text-decoration: none;
     border: none;
-  }
-
-  nav ul ul .toggle,
-  nav ul ul a {
-    padding: 0 40px;
-  }
-
-  nav ul li ul li .toggle,
-  nav ul ul a {
-    color: black;
+    text-align: right;
   }
 
   nav ul li ul li .toggle,
   nav ul ul a,
   nav ul ul ul a {
-    padding: 14px 20px;
-    color: white;
+    padding: 14px;
+    color: black;
     font-size: 17px;
-  }
+    text-align: right;
 
-  nav ul ul ul a {
-    padding: 0 80px;
-    color: red;
+    &:hover {
+      color: var(--blauwgroen);
+    }
   }
 
   .toggle + a,
   .menu {
-    display: none;
-  }
-
-  nav a:hover {
-    color: red;
-  }
-
-  .toggle:hover {
-    color: red;
-  }
-
-  nav ul ul {
-    float: none;
-    position: static;
-    color: white;
-  }
-
-  nav ul li:hover > ul,
-  nav ul ul li:hover > ul {
     display: none;
   }
 
@@ -144,15 +133,6 @@ nav a {
   nav ul li {
     display: block;
     width: 100%;
-  }
-
-  nav ul ul li {
-    display: block;
-    width: 100%;
-  }
-
-  nav ul ul ul li {
-    position: static;
   }
 }
 
