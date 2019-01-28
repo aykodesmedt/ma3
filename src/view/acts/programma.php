@@ -59,10 +59,10 @@
     <input type="submit" value="Filter" class="button--filter-submit">
 </form>
 <section class="section--slechtweer">
-  <img src="./assets/img/wolkje.png" alt="donderwolk" />
+  <img src="./assets/img/wolkje.png" alt="donderwolk" width="24" height="16"/>
   <p>
     Bij slecht weer zal er een alternatief programma opgesteld worden dat
-    door zal gaan in de gemeentelijke sporthal.
+    door zal gaan in de gemeentelijke sporthal. Meer informatie volgt de week voor het event.
   </p>
 </section>
 <section>

@@ -108,7 +108,7 @@
 }
 
 .header--p-datum {
-  /* font-size: 4rem; */
+  font-size: 4rem;
 
   @media (--sm) {
     font-size: 1.8rem;
@@ -278,6 +278,10 @@
   align-items: center;
 }
 
+.link--meerWeten:hover {
+  transform: translateX(.5rem);
+}
+
 .article--straatact {
   grid-area: kijker2;
 }
@@ -323,8 +327,8 @@
   margin-top: 2rem;
 
   & :hover {
-    color: white;
-    background-color: var(--paars);
+    transform: scale(1.01);
+    padding: .6rem 1.1rem;
   }
 }
 
@@ -527,6 +531,14 @@
 
 .event1 {
   grid-area: event1;
+
+  @media (--sm) {
+    margin-top: 5rem;
+  }
+
+  @media (--md) {
+    margin-top: 0;
+  }
 }
 
 .event2 {

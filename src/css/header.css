@@ -28,6 +28,10 @@ header {
   }
 }
 
+.menu--list_item > li :hover {
+  transform: scale(1.1);
+}
+
 .menu_active {
   color: var(--blauwgroen);
   /* text-decoration: underline; */
@@ -98,14 +102,11 @@ nav a {
     color: black;
     font-size: 17px;
     text-align: right;
-
-    &:hover {
-      color: var(--blauwgroen);
-    }
   }
 
   .toggle + a,
   .menu {
+    visibility: hidden;
     display: none;
   }
 
@@ -131,4 +132,8 @@ nav a {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.menu > li > a :hover {
+  transform: scale(1.05);
 }

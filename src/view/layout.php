@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" src="./assets/logo_klein_320.png">
+  <link rel="icon" src="./assets/img/icon.png">
   <script>
     WebFontConfig = {
       custom: {
@@ -28,7 +28,7 @@
   </head>
   <body>
     <header>
-        <nav>
+        <nav id="menu">
           <a href="index.php" class="logo">
             <h1 class="hidden">ISB - logo</h1>
             <img src="./assets/img/logo_klein_320.png" alt="klein logo van Internationaal Straattheaterfestival Beveren">
