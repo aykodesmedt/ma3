@@ -268,11 +268,14 @@
 }
 
 .link--meerWeten {
+  width: 15rem;
   color: black;
   font-size: 1.6rem;
   text-transform: capitalize;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .article--straatact {

@@ -231,7 +231,7 @@
           tikken... of zelf uw voorraad aan de man brengen, het blijft een
           traditie op de Beverse feesten die we wat graag in ere houden.
         </p>
-        <a href="http://beverse-feesten.be/randactiviteiten-2018/" class="link--meerWeten"><p>MEER WETEN</p><img src="./assets/img/pijltje.png" alt="pijlte naar rechts"></a>
+        <a href="http://beverse-feesten.be/randactiviteiten-2018/" class="link--meerWeten"><p>MEER WETEN</p><img src="./assets/img/pijltje.png" alt="pijlte naar rechts" width="20" height="8"></a>
       </div>
     </article>
   </div>

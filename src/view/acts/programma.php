@@ -6,7 +6,7 @@
     <input type="hidden" name="action" value="filter" />
 
     <div class="switch-field switch-dagen">
-      <input type="radio" id="switch_2_left" name="dag" value="1"
+      <input class="switch-dag" type="radio" id="switch_2_left" name="dag" value="1"
       <?php
         if($currentDag == 1){
           echo 'checked';
@@ -14,7 +14,7 @@
       ?>
       />
       <label for="switch_2_left">Vrijdag 24 augustus</label>
-      <input type="radio" id="switch_2_center" name="dag" value="2"
+      <input class="switch-dag" type="radio" id="switch_2_center" name="dag" value="2"
         <?php
           if($currentDag == 2){
             echo 'checked';
@@ -22,7 +22,7 @@
         ?>
       />
       <label for="switch_2_center">Zaterdag 25 augustus</label>
-      <input type="radio" id="switch_2_right" name="dag" value="3"
+      <input class="switch-dag" type="radio" id="switch_2_right" name="dag" value="3"
       <?php
         if($currentDag == 3){
           echo 'checked';
@@ -33,12 +33,12 @@
     </div>
     <hr/>
     <div class="switch-field switch-soorten">
-      <input type="radio" id="switch_3_left" name="act" value=""
+      <input class="switch-dag" type="radio" id="switch_3_left" name="act" value=""
       checked
       />
       <label for="switch_3_left">Alle acts</label>
       <div>
-        <input type="radio" id="switch_3_center" name="act" value="voorstelling"
+        <input class="switch-dag" type="radio" id="switch_3_center" name="act" value="voorstelling"
         <?php
           if($currentSoortact == 'voorstelling'){
             echo 'checked';
@@ -46,7 +46,7 @@
         ?>
         />
         <label for="switch_3_center">Voorstellingen</label>
-        <input type="radio" id="switch_3_right" name="act" value="straatact"
+        <input class="switch-dag" type="radio" id="switch_3_right" name="act" value="straatact"
         <?php
           if($currentSoortact == 'straatact'){
             echo 'checked';
@@ -59,7 +59,7 @@
     <input type="submit" value="Filter" class="button--filter-submit">
 </form>
 <section class="section--slechtweer">
-  <img src="" alt="" />
+  <img src="./assets/img/wolkje.png" alt="donderwolk" />
   <p>
     Bij slecht weer zal er een alternatief programma opgesteld worden dat
     door zal gaan in de gemeentelijke sporthal.
@@ -83,7 +83,7 @@
                   <h3 class="title--resultaat-name-act"><?php echo $act['name_act'];?></h3>
                   <p class="title--resultaat-name-group"><?php echo $act['name_group'];?></p>
                   <p class="p--resultaat-uur"><?php echo $act['uur'];?></p>
-                  <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>" class="link--meerWeten"><p>MEER WETEN</p><img src="./assets/img/pijltje.png" alt="pijlte naar rechts"></a>
+                  <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>" class="link--meerWeten"><p>MEER WETEN</p><img src="./assets/img/pijltje.png" alt="pijlte naar rechts" width="20" height="8"></a>
                 </div>
                 <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="een streep als decoratie">
               </article>

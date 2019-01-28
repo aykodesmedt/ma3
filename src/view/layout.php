@@ -64,7 +64,7 @@
       <div class="container--footer">
         <article class="footer--article-opdehoogte">
           <h2 class="footer--title">Blijf op de hoogte!</h2>
-          <img src="./assets/img/fb-logo.png" alt="klein logo van facebook als link naar facebook">
+          <a href="https://straattheaterfestivalbeveren.wordpress.com/"><img src="./assets/img/fb-logo.png" alt="klein logo van facebook als link naar facebook"></a>
         </article>
         <div class="footer--article-info">
           <article class="footer--article footer--slechtweer">

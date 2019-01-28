@@ -6,6 +6,10 @@
   font-family: Montserrat, Tahoma, Verdana, sans-serif;
 }
 
+.switch-dag {
+  background-color: var(--blauwgroen);
+}
+
 .switch-dagen {
   display: flex;
 
@@ -52,11 +56,11 @@
   margin: 1rem;
 
   @media (--lg) {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   @media (--xl) {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -70,6 +74,8 @@
 }
 
 .section--slechtweer {
+  display: flex;
+  flex-direction: row;
   font-size: 1.6rem;
 
   @media (--sm) {
@@ -129,7 +135,7 @@
 }
 
 .button--filter-submit {
-  font-size: 2rem;
+  font-size: 2.4rem;
   background-color: var(--paars);
   border: .1rem solid var(--paars);
   border-radius: 25rem;
@@ -139,14 +145,6 @@
   }
 
   @media (--md) {
-    padding: 2rem 36rem;
-  }
-
-  @media (--lg) {
-    padding: 2rem 49rem;
-  }
-
-  @media (--xl) {
-    padding: 2rem 60rem;
+    padding: 2rem 10rem;
   }
 }
