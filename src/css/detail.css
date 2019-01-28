@@ -1,21 +1,14 @@
-/* detail */
-
 .page--backtofilter {
   align-self: flex-start;
   margin-left: 2rem;
 }
-
-/* .page--backtofilter > img:hover {
-  transform: perspective(1px) translateZ(0);
-} */
 
 .detail--div-grid {
   display: grid;
   grid-gap: 1rem;
 
   @media (--sm) {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(4, auto);
+    grid-template: repeat(4, auto) / auto;
     grid-template-areas:
       'actFoto'
       'actTitel'
@@ -60,7 +53,6 @@
 
 .detail--container-icons {
   font-size: 1.8rem;
-  /* padding: 1rem; */
 
   @media (--sm) {
     height: auto;
@@ -93,7 +85,7 @@
 }
 
 hr {
-  border-color: black;
+  border-color: var(--paars);
 }
 
 .website {
@@ -124,8 +116,10 @@ hr {
 
 .detail__name_act {
   font-family: Gobold, Arial, Helvetica, sans-serif;
-  color: var(--blauwgroen);
+  color: black;
+  font-style: thin;
   font-size: 3.8rem;
+  background-color: var(--blauwgroen);
 }
 
 .detail__name_group {
@@ -136,8 +130,7 @@ hr {
 
 .detail--title-beschrijving-act {
   font-size: 3.6rem;
-  padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding: 0 0 1rem 2rem;
 }
 
 .detail--beschrijving-act {
@@ -152,15 +145,13 @@ hr {
 
   @media (--sm) {
     width: 90vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template: repeat(2, auto) / 1fr;
     margin-left: 1rem;
   }
 
   @media (--md) {
     width: 80vw;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 1fr;
+    grid-template: 1fr / repeat(2, auto);
     margin-left: 5rem;
   }
 
@@ -196,7 +187,7 @@ hr {
   }
 }
 
-iframe {
+.detail--video-foto {
   @media (--sm) {
     width: 32rem;
     height: 20rem;

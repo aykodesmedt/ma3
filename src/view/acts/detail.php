@@ -4,7 +4,7 @@
   // var_dump($act[0]['id']);
 ?>
 <a href="index.php?page=programma&action=filter&dag=<?php echo $act[0]['dag_id']; ?>&act=<?php echo $act[0]['soort_act']; ?>" class="page--backtofilter">
-  <img src="./assets/img/icons/back.png" alt="iconback">
+  <img src="./assets/img/icons/back.png" alt="een pijltje naar links">
 </a>
 <section>
   <div class="detail--div-grid">
@@ -24,44 +24,44 @@
 
         <div class="detail--container-icons">
           <ul>
-          <?php
-            foreach($act as $actje):
-          ?>
-            <li class="detail--listitem-icon detail--dag">
-              <p><?php echo $actje['dag']; ?></p>
-            </li>
-            <div class="detail--container-listitem-icon detail--daginfo">
-              <li class="detail--listitem-icon">
-                <img src="./assets/img/icons/icon_time.png" alt="icontime" />
-                <p><?php echo $actje['uur']; ?></p>
+            <?php
+              foreach($act as $actje):
+            ?>
+              <li class="detail--listitem-icon detail--dag">
+                <p><?php echo $actje['dag']; ?></p>
               </li>
-              <li class="detail--listitem-icon">
-                <img src="./assets/img/icons/icon_location.png" alt="iconlocation" />
-                <p><?php echo $actje['locatie']; ?></p>
+              <li class="detail--container-listitem-icon detail--daginfo">
+                <div class="detail--listitem-icon">
+                  <img src="./assets/img/icons/icon_time.png" alt="icontime" />
+                  <p><?php echo $actje['uur']; ?></p>
+                </div>
+                <div class="detail--listitem-icon">
+                  <img src="./assets/img/icons/icon_location.png" alt="iconlocation" />
+                  <p><?php echo $actje['locatie']; ?></p>
+                </div>
               </li>
-            </div>
-
-          <?php
-            endforeach;
-          ?>
+            <?php
+              endforeach;
+            ?>
+          </ul>
           <hr/>
           <?php
             if(!empty($act[0]['website'])):
           ?>
-            <li class="detail--listitem-icon website">
+            <div class="detail--listitem-icon website">
               <img src="./assets/img/icons/icon_website.png" alt="icon" />
               <a href="https://<?php echo $act[0]['website']; ?>">
                 <p><?php echo $act[0]['website']; ?></p>
               </a>
-            </li>
+            </div>
           <?php
             endif;
           ?>
-            <li class="detail--listitem-icon">
+            <div class="detail--listitem-icon">
               <img src="./assets/img/icons/icon_world.png" alt="icon" />
               <p><?php echo $act[0]['land']; ?></p>
-            </li>
-          </ul>
+            </div>
+
         </div>
 
 
@@ -98,7 +98,31 @@
     if($act[0]['video'] !== ''){
   ?>
   <div class="container--video">
-    <?php echo $act[0]['video']; ?>
+    <a href="<?php echo $act[0]['video']; ?>">
+      <picture class="detail--video-foto">
+          <source
+            srcset="./assets/img/acts/videoimages/webp/<?php echo $act[0]['video_img']; ?>_1024.webp 90w,
+            ./assets/img/acts/videoimages/webp/<?php echo $act[0]['video_img']; ?>_768.webp 70w,
+            ./assets/img/acts/videoimages/webp/<?php echo $act[0]['video_img']; ?>_320.webp 32w"
+            sizes="
+            (min-width: 1024px) 10vw,
+            (min-width: 768px) 90vw,
+            (min-width: 500px) 60vw,
+            (min-width: 320px) 50vw"
+            type="image/webp">
+          <source
+            srcset="./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_1024jpg.jpg 90w,
+            ./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_768.jpg 70w,
+            ./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_320.jpg 32w"
+            sizes="
+            (min-width: 1024px) 10vw,
+            (min-width: 768px) 90vw,
+            (min-width: 500px) 60vw,
+            (min-width: 320px) 50vw"
+            type="image/jpeg">
+            <img src="./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_1024.jpg" alt="link naar youtube filmpje vogelbaum" width="100%">
+      </picture>
+    </a>
   </div>
   <?php
     }
@@ -113,8 +137,7 @@
     ?>
       <a class="resultaat" href="index.php?page=detail&amp;id=<?php echo $ookvandaag['id']; ?>&amp;dag=<?php echo $ookvandaag['dag_id']; ?>">
           <div class="resultaat_foto">
-          <img src="./assets/img/acts/jpg/<?php echo $ookvandaag['img']; ?>.jpg" alt="<?php echo $ookvandaag['name_act']; ?>" width="300" height="300">
-            <span class="page--tag">Acrobatie</span>
+            <img src="./assets/img/acts/jpg/<?php echo $ookvandaag['img']; ?>.jpg" alt="<?php echo $ookvandaag['name_act']; ?>" width="300" height="300">
           </div>
           <div class="resultaat_info">
             <h3 class="title--resultaat-name-act"><?php echo $ookvandaag['name_act'];?></h3>

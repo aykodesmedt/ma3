@@ -1,8 +1,8 @@
 @font-face {
   font-family: Gobold;
   src:
-    url(Gobold_Thin.woff2) format('woff2'),
-    url(Gobold_Thin.woff) format('woff');
+    url(Gobold_Thin.woff2) format(woff2),
+    url(Gobold_Thin.woff) format(woff);
   font-weight: thin;
   font-style: normal;
 }
@@ -10,16 +10,16 @@
 @font-face {
   font-family: Gobold;
   src:
-    url(Gobold_Thin_Italic.woff2) format('woff2'),
-    url(Gobold_Thin_Italic.woff) format('woff');
+    url(Gobold_Thin_Italic.woff2) format(woff2),
+    url(Gobold_Thin_Italic.woff) format(woff);
   font-style: italic;
 }
 
 @font-face {
   font-family: Montserrat;
   src:
-    url(Montserrat-Regular.woff2) format('woff2'),
-    url(Montserrat-Regular.woff) format('woff');
+    url(Montserrat-Regular.woff2) format(woff2),
+    url(Montserrat-Regular.woff) format(woff);
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +27,7 @@
 @font-face {
   font-family: Montserrat;
   src:
-    url(Montserrat-Italic.woff2) format('woff2'),
-    url(Montserrat-Italic.woff) format('woff');
+    url(Montserrat-Italic.woff2) format(woff2),
+    url(Montserrat-Italic.woff) format(woff);
   font-style: italic;
 }

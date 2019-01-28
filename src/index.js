@@ -1,10 +1,12 @@
 require('./style.css');
+require('./assets/fonts/fonts.css');
+
 {
   const $filterForm = document.querySelector(`.filter--form`),
     $results = document.querySelector(`.grid--resultaten`);
 
   const init = () => {
-    return;
+    // return;
     if ($filterForm) {
       $filterForm.addEventListener(`submit`, e => {
         e.target.preventDefault();

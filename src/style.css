@@ -230,6 +230,11 @@ footer {
 
 .footer--article > a {
   padding-top: 2rem;
+  color: black;
+}
+
+.footer--article > a:hover {
+  text-decoration: underline;
 }
 
 .page--highlight {

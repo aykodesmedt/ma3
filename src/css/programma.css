@@ -42,14 +42,22 @@
 .switch-field label {
   float: left;
   color: black;
-  font-size: 14px;
+  font-size: 2rem;
   font-weight: normal;
   text-align: center;
   text-shadow: none;
-  padding: 6px 14px;
+  padding: 20px 40px;
   border: 1px solid var(--blauwgroen);
   border-radius: 25rem;
   margin: 1rem;
+
+  @media (--lg) {
+    font-size: 2.4rem;
+  }
+
+  @media (--xl) {
+    font-size: 2.8rem;
+  }
 }
 
 .switch-field label:hover {
@@ -75,6 +83,10 @@
 
 .article--resultaat {
   width: 30rem;
+}
+
+.article--resultaat-listitem {
+  border: .2rem solid white;
 }
 
 .grid--resultaten {
@@ -118,9 +130,23 @@
 
 .button--filter-submit {
   font-size: 2rem;
-  width: 27rem;
-  height: 4rem;
   background-color: var(--paars);
   border: .1rem solid var(--paars);
   border-radius: 25rem;
+
+  @media (--sm) {
+    padding: 2rem 13rem;
+  }
+
+  @media (--md) {
+    padding: 2rem 36rem;
+  }
+
+  @media (--lg) {
+    padding: 2rem 49rem;
+  }
+
+  @media (--xl) {
+    padding: 2rem 60rem;
+  }
 }

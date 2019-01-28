@@ -68,8 +68,7 @@
 
   @media (--lg) {
     position: relative;
-    margin-right: -40rem;
-    margin-bottom: 2rem;
+    margin: 0 -40rem 2rem 0;
   }
 
   @media (--xl) {
@@ -239,13 +238,11 @@
 
   @media (--sm) {
     background-image: url(./../assets/img/kijker1_320.png);
-    /* margin-top: -2rem; */
   }
 
   @media (--md) {
     background-image: url(./../assets/img/kijker1_768.png);
-    margin-top: 3rem;
-    margin-left: -3rem;
+    margin: 3rem 0 0 -3rem;
   }
 
   @media (--md) {
@@ -271,8 +268,11 @@
 }
 
 .link--meerWeten {
+  color: black;
   font-size: 1.6rem;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
 }
 
 .article--straatact {
@@ -418,8 +418,7 @@
 
   @media (--sm) {
     background-image: url(./../assets/img/vrijwilliger_320.png);
-    background-position: center;
-    background-position-y: 1rem;
+    background-position: center 1rem;
     margin-left: 0;
     width: 52rem;
     align-items: center;
@@ -428,10 +427,8 @@
   @media (--md) {
     background-image: url(./../assets/img/vrijwilliger_768.png);
     width: 53.3rem;
-    background-position-x: .15rem;
-    background-position-y: 1rem;
-    margin-top: 4rem;
-    margin-left: -15rem;
+    background-position: .15rem 1rem;
+    margin: 4rem 0 0 -15rem;
     align-items: flex-start;
   }
 
@@ -498,10 +495,6 @@
   }
 }
 
-.section--andereevenementen {
-  /* width: 130rem; */
-}
-
 .container--evenementen {
   display: grid;
 
@@ -547,11 +540,9 @@
 
 .article--evenementen {
   display: grid;
-  color: black;
 
   @media (--sm) {
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 5rem 1fr;
+    grid-template: 5rem 1fr / 2fr 3fr;
 
     grid-template-areas:
       'event_title event_title'
@@ -561,8 +552,7 @@
   @media (--md) {
     width: 30rem;
     height: 60rem;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 7rem 1fr;
+    grid-template: 1fr 7rem 1fr / auto;
 
     grid-template-areas:
       'event_foto'
@@ -587,4 +577,18 @@
   font-size: 1.6rem;
   line-height: 2.2rem;
   padding: 1rem;
+}
+
+.tag--datum {
+  position: absolute;
+  margin-left: 1rem;
+}
+
+.underlined-home {
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--blauwgroen);
 }

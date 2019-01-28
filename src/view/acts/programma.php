@@ -71,23 +71,21 @@
     <?php
       foreach($acts as $act){
         ?>
-          <li>
+          <li class="article--resultaat-listitem">
               <article class="article--resultaat">
                 <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>">
-
                   <div class="container--resultaat-img">
                     <span class="page--tag page--tag-results"><?php echo $act['locatie']; ?></span>
                     <img src="./assets/img/acts/jpg/<?php echo $act['img']; ?>.jpg" alt="<?php echo $act['name_act']; ?>" width="300" height="300">
-
                   </div>
                 </a>
                 <div class="container--resultaat-info">
                   <h3 class="title--resultaat-name-act"><?php echo $act['name_act'];?></h3>
                   <p class="title--resultaat-name-group"><?php echo $act['name_group'];?></p>
                   <p class="p--resultaat-uur"><?php echo $act['uur'];?></p>
-                  <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>" class="link--meerWeten">MEER WETEN</a>
+                  <a href="index.php?page=detail&amp;id=<?php echo $act['id']; ?>&amp;dag=<?php echo $act['dag_id']; ?>" class="link--meerWeten"><p>MEER WETEN</p><img src="./assets/img/pijltje.png" alt="pijlte naar rechts"></a>
                 </div>
-                <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="">
+                <img src="./assets/img/resultaat_320.png" class="decoratie--streep" alt="een streep als decoratie">
               </article>
           </li>
         <?php
