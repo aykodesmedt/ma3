@@ -120,7 +120,7 @@
             (min-width: 500px) 60vw,
             (min-width: 320px) 50vw"
             type="image/jpeg">
-            <img src="./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_1024.jpg" alt="link naar youtube filmpje vogelbaum" width="100%">
+          <img src="./assets/img/acts/videoimages/jpg/<?php echo $act[0]['video_img']; ?>_1024.jpg" alt="link naar youtube filmpje vogelbaum" width="100%">
       </picture>
     </a>
   </div>

@@ -9,7 +9,7 @@
     WebFontConfig = {
       custom: {
         families: ['Montserrat', 'Gobold'],
-        urls: ['/assets/fonts/fonts.css']
+        urls: ['./assets/fonts/fonts.css']
       }
     };
 
